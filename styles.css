@@ -127,8 +127,12 @@ button:hover {
     justify-content: space-between;
     margin-bottom: 20px;
     padding: 10px;
-    background-color: #eaeaea;
+    background-color: #eaeaea; /* The default gray background */
+    background-image: linear-gradient(to right, rgba(0, 255, 0, 0.3), transparent);
+    background-size: 0% 100%; /* Initially set the green bar width to 0 */
+    background-repeat: no-repeat;
     border-radius: 8px;
+    transition: background-size 0.1s linear;
 }
 
 .play-button {
@@ -136,28 +140,10 @@ button:hover {
     align-items: center;
     justify-content: center;
     margin-right: 15px;
-    position: relative;
-}
-
-.circle-progress {
-    width: 50px;
-    height: 50px;
-    background: conic-gradient(#f39c12 0%, #eaeaea 0%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
 }
 
 .play-icon {
     font-size: 18px;
-    position: absolute;
-}
-
-/* Styling for pause icon */
-.play-icon.fa-pause {
-    content: none; /* Removes any default styling */
 }
 
 .song-info {
@@ -173,18 +159,4 @@ button:hover {
 .song-length {
     font-size: 1.1rem;
     text-align: right;
-}
-
-/* Circular Progress */
-@keyframes progress {
-    from {
-        background: conic-gradient(#f39c12 0%, #eaeaea 0%);
-    }
-    to {
-        background: conic-gradient(#f39c12 100%, #eaeaea 100%);
-    }
-}
-
-.circle-progress.playing {
-    animation: progress 30s linear forwards;
 }

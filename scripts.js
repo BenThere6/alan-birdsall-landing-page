@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
     
     playButtons.forEach(button => {
         const audio = button.querySelector('.audio');
-        const circleProgress = button.querySelector('.circle-progress');
         const playIcon = button.querySelector('.play-icon');
         const songLengthElement = button.parentElement.querySelector('.song-length'); // Get the song length element
+        const songElement = button.closest('.song'); // The entire song element for the progress bar
 
         // Log initial audio duration and set it dynamically
         audio.addEventListener('loadedmetadata', () => {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const minutes = Math.floor(duration / 60);
             const seconds = Math.floor(duration % 60).toString().padStart(2, '0');
             songLengthElement.textContent = `${minutes}:${seconds}`; // Display song length next to the song
-        });        
+        });
 
         button.addEventListener('click', () => {
             console.log(`Play button clicked for: ${audio.src}`);
@@ -34,24 +34,22 @@ document.addEventListener("DOMContentLoaded", function () {
                     currentlyPlaying.pause();
                     currentlyPlaying.currentTime = 0; // Reset to the beginning
 
-                    // Reset play/pause icon for the previously playing audio
+                    // Reset the play/pause icon and background of the previously playing song
                     const prevButton = currentlyPlaying.closest('.play-button');
+                    const prevSong = currentlyPlaying.closest('.song');
                     if (prevButton) {
-                        const prevCircle = prevButton.querySelector('.circle-progress');
                         const prevIcon = prevButton.querySelector('.play-icon');
-
-                        if (prevCircle) {
-                            prevCircle.classList.remove('playing');
-                            prevCircle.style.animation = 'none'; // Reset progress
-                        }
                         if (prevIcon) {
                             prevIcon.classList.remove('fa-pause');
                             prevIcon.classList.add('fa-play');
                         }
                     }
+                    if (prevSong) {
+                        prevSong.style.backgroundSize = '0% 100%'; // Reset the green progress bar
+                    }
                 }
 
-                // Play this audio and start circular progress
+                // Play this audio
                 audio.play().then(() => {
                     console.log("Audio is now playing");
 
@@ -62,48 +60,38 @@ document.addEventListener("DOMContentLoaded", function () {
                         playIcon.classList.add('fa-pause');
                     }
 
-                    const duration = audio.duration;
-                    console.log(`Setting progress animation for duration: ${duration} seconds`);
+                    // Start updating the background progress
+                    const updateProgress = () => {
+                        const progressPercentage = (audio.currentTime / audio.duration) * 100;
+                        songElement.style.backgroundSize = `${progressPercentage}% 100%`; // Move the green overlay
+                    };
 
-                    if (circleProgress) {
-                        circleProgress.classList.add('playing');
-                        circleProgress.style.animation = 'none'; // Reset any previous animation
-                        setTimeout(() => {
-                            circleProgress.style.animation = `progress ${duration}s linear forwards`;
-                            console.log("Starting progress animation");
-                        }, 10); // Slight delay to trigger the animation reset
-                    }
+                    updateProgress(); // Initial call to set progress
+                    audio.addEventListener('timeupdate', updateProgress); // Keep updating progress during playback
 
-                    // Reset animation and icon when the audio ends
+                    // Reset background when the audio ends
                     audio.onended = () => {
-                        if (circleProgress) {
-                            circleProgress.classList.remove('playing');
-                            circleProgress.style.animation = 'none'; // Reset progress when audio ends
-                        }
                         if (playIcon) {
                             playIcon.classList.remove('fa-pause');
                             playIcon.classList.add('fa-play');
                         }
                         currentlyPlaying = null; // No audio playing
-                        console.log("Audio ended, progress and icon reset");
+                        songElement.style.backgroundSize = '0% 100%'; // Reset progress when audio ends
+                        console.log("Audio ended, icon and background reset");
                     };
                 }).catch(error => {
                     console.log("Error playing audio: ", error);
                 });
             } else {
-                // Pause the audio and stop the circular progress
+                // Pause the audio
                 audio.pause();
-                if (circleProgress) {
-                    circleProgress.classList.remove('playing');
-                    circleProgress.style.animation = 'none'; // Reset progress
-                }
 
                 if (playIcon) {
                     playIcon.classList.remove('fa-pause');
                     playIcon.classList.add('fa-play');
                 }
                 currentlyPlaying = null; // No audio playing
-                console.log("Audio paused, resetting progress and icon");
+                console.log("Audio paused, icon and background reset");
             }
         });
     });
