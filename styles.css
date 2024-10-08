@@ -12,10 +12,10 @@ header {
     height: 700px;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Keeps the whole section to the right */
+    justify-content: flex-end;
     box-sizing: border-box;
-    padding-right: 50px; /* Padding on the right */
-    padding-left: 50px;  /* Optional: Adding left padding for balance */
+    padding-right: 50px;
+    padding-left: 50px;
 }
 
 .header-image {
@@ -28,16 +28,16 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Ensures the image is behind the text */
+    z-index: -1;
 }
 
 .header-content {
     color: white;
     text-align: right;
-    max-width: 400px; /* Control the width of the content */
-    width: 100%; /* Ensure it doesn’t overflow */
+    max-width: 400px;
+    width: 100%;
     box-sizing: border-box;
-    padding-right: 20px; /* Additional padding inside the content */
+    padding-right: 20px;
 }
 
 h1 {
@@ -51,23 +51,23 @@ h1 {
 
 .current-music-container {
     display: flex;
-    justify-content: center; /* Centers the music items horizontally */
+    justify-content: center;
     margin-top: 20px;
-    max-width: 100%; /* Prevents overflowing */
+    max-width: 100%;
 }
 
 .current-music {
     display: flex;
     gap: 20px;
-    justify-content: center; /* Ensures music items are centered within the container */
+    justify-content: center;
 }
 
 .music-item {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 200px; /* Adjust the size of music item blocks */
+    width: 200px;
 }
 
 .album-image {
@@ -151,23 +151,13 @@ button:hover {
 }
 
 .play-icon {
-    width: 0;
-    height: 0;
-    border-left: 12px solid black;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
+    font-size: 18px;
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 /* Styling for pause icon */
-.play-icon.playing {
-    border: none; /* Removes the play triangle when paused */
-    font-size: 18px; /* Adjust size for pause icon */
-    font-weight: bold;
-    content: '||'; /* Pause icon */
+.play-icon.fa-pause {
+    content: none; /* Removes any default styling */
 }
 
 .song-info {
