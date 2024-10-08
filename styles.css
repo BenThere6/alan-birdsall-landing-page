@@ -92,8 +92,11 @@ button:hover {
 
 .coming-soon-container,
 .previous-music-container {
-    margin: 20px;
+    margin: 40px;
     padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .section-title {
@@ -108,11 +111,26 @@ button:hover {
     gap: 20px;
 }
 
-/* Styles for the Featured Album Songs */
-.album-songs {
+.coming-soon-item, .previous-music-item {
+    background-color: #f0f0f0;
     padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 200px;
+}
+
+.coming-soon-item h3, .previous-music-item h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.coming-soon-item p, .previous-music-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.previous-music-item button {
+    margin-top: 10px;
 }
 
 .song-list {
@@ -128,12 +146,11 @@ button:hover {
     margin-bottom: 20px;
     padding: 10px;
     background-color: #eaeaea; /* The default gray background */
-    background-image: none; /* Ensure no conflicting gradients */
     background-color: #eaeaea;
     border-radius: 8px;
     transition: background-size 0.1s linear;
     position: relative;
-    overflow: hidden; /* Ensure the background progress stays inside the song element */
+    overflow: hidden;
 }
 
 .song::before {
