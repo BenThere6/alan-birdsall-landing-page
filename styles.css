@@ -107,3 +107,83 @@ button:hover {
     justify-content: center;
     gap: 20px;
 }
+
+/* Styles for the Featured Album Songs */
+.album-songs {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.song-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.song {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #eaeaea;
+    border-radius: 8px;
+}
+
+.play-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    position: relative;
+}
+
+.circle-progress {
+    width: 50px;
+    height: 50px;
+    background: conic-gradient(#f39c12 0%, #eaeaea 0%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.play-icon {
+    width: 0;
+    height: 0;
+    border-left: 12px solid black;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+}
+
+.song-info {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.song-name {
+    font-size: 1.1rem;
+}
+
+.song-length {
+    font-size: 1.1rem;
+    text-align: right;
+}
+
+/* Circular Progress */
+@keyframes progress {
+    from {
+        background: conic-gradient(#f39c12 0%, #eaeaea 0%);
+    }
+    to {
+        background: conic-gradient(#f39c12 100%, #eaeaea 100%);
+    }
+}
+
+.circle-progress.playing {
+    animation: progress 30s linear forwards;
+}
