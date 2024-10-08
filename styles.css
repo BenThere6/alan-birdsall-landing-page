@@ -157,6 +157,17 @@ button:hover {
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for pause icon */
+.play-icon.playing {
+    border: none; /* Removes the play triangle when paused */
+    font-size: 18px; /* Adjust size for pause icon */
+    font-weight: bold;
+    content: '||'; /* Pause icon */
 }
 
 .song-info {
