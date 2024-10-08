@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const circleProgress = button.querySelector('.circle-progress');
         const playIcon = button.querySelector('.play-icon');
 
-        // Log initial audio duration (will be 0 initially and updated when audio loads)
         audio.addEventListener('loadedmetadata', () => {
             console.log(`Audio duration for this song is: ${audio.duration} seconds`);
         });
@@ -33,14 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
                         const prevCircle = prevButton.querySelector('.circle-progress');
                         const prevIcon = prevButton.querySelector('.play-icon');
 
-                        // Add checks to ensure that prevCircle and prevIcon are not null
                         if (prevCircle) {
                             prevCircle.classList.remove('playing');
                             prevCircle.style.animation = 'none'; // Reset progress
                         }
                         if (prevIcon) {
-                            prevIcon.classList.remove('pause-icon');
-                            prevIcon.classList.add('play-icon');
+                            prevIcon.classList.remove('fa-pause');
+                            prevIcon.classList.add('fa-play');
                         }
                     }
                 }
@@ -49,16 +47,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 audio.play().then(() => {
                     console.log("Audio is now playing");
 
-                    // Set currentlyPlaying to this audio
                     currentlyPlaying = audio;
 
-                    // Update play icon to pause icon (CSS class swap)
                     if (playIcon) {
-                        playIcon.classList.remove('play-icon');
-                        playIcon.classList.add('pause-icon');
+                        playIcon.classList.remove('fa-play');
+                        playIcon.classList.add('fa-pause');
                     }
 
-                    // Ensure the animation restarts correctly
                     const duration = audio.duration;
                     console.log(`Setting progress animation for duration: ${duration} seconds`);
 
@@ -78,8 +73,8 @@ document.addEventListener("DOMContentLoaded", function () {
                             circleProgress.style.animation = 'none'; // Reset progress when audio ends
                         }
                         if (playIcon) {
-                            playIcon.classList.remove('pause-icon');
-                            playIcon.classList.add('play-icon');
+                            playIcon.classList.remove('fa-pause');
+                            playIcon.classList.add('fa-play');
                         }
                         currentlyPlaying = null; // No audio playing
                         console.log("Audio ended, progress and icon reset");
@@ -95,10 +90,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     circleProgress.style.animation = 'none'; // Reset progress
                 }
 
-                // Reset play/pause icon to play (CSS class swap)
                 if (playIcon) {
-                    playIcon.classList.remove('pause-icon');
-                    playIcon.classList.add('play-icon');
+                    playIcon.classList.remove('fa-pause');
+                    playIcon.classList.add('fa-play');
                 }
                 currentlyPlaying = null; // No audio playing
                 console.log("Audio paused, resetting progress and icon");
