@@ -9,10 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
         const audio = button.querySelector('.audio');
         const circleProgress = button.querySelector('.circle-progress');
         const playIcon = button.querySelector('.play-icon');
+        const songLengthElement = button.parentElement.querySelector('.song-length'); // Get the song length element
 
+        // Log initial audio duration and set it dynamically
         audio.addEventListener('loadedmetadata', () => {
-            console.log(`Audio duration for this song is: ${audio.duration} seconds`);
-        });
+            const duration = audio.duration; // Get this song's duration
+            console.log(`Audio duration for this song is: ${duration} seconds`);
+        
+            // Format the duration to minutes and seconds (MM:SS)
+            const minutes = Math.floor(duration / 60);
+            const seconds = Math.floor(duration % 60).toString().padStart(2, '0');
+            songLengthElement.textContent = `${minutes}:${seconds}`; // Display song length next to the song
+        });        
 
         button.addEventListener('click', () => {
             console.log(`Play button clicked for: ${audio.src}`);
