@@ -13,8 +13,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end; /* Keeps the whole section to the right */
-    padding-right: 50px;
     box-sizing: border-box;
+    padding-right: 50px; /* Padding on the right */
+    padding-left: 50px;  /* Optional: Adding left padding for balance */
 }
 
 .header-image {
@@ -32,8 +33,11 @@ header {
 
 .header-content {
     color: white;
-    text-align: right; /* Keeps the text aligned to the right */
-    max-width: 400px; /* You can control how wide the content section is */
+    text-align: right;
+    max-width: 400px; /* Control the width of the content */
+    width: 100%; /* Ensure it doesn’t overflow */
+    box-sizing: border-box;
+    padding-right: 20px; /* Additional padding inside the content */
 }
 
 h1 {
@@ -49,6 +53,7 @@ h1 {
     display: flex;
     justify-content: center; /* Centers the music items horizontally */
     margin-top: 20px;
+    max-width: 100%; /* Prevents overflowing */
 }
 
 .current-music {
