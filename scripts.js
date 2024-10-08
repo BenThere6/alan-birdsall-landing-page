@@ -28,31 +28,21 @@ document.addEventListener("DOMContentLoaded", function () {
             if (audio.paused) {
                 console.log("Audio is currently paused, trying to play...");
 
-                // If there is currently playing audio, pause it
+                // If another audio is playing, pause it
                 if (currentlyPlaying && currentlyPlaying !== audio) {
                     console.log(`Pausing other audio: ${currentlyPlaying.src}`);
                     currentlyPlaying.pause();
-                    currentlyPlaying.currentTime = 0; // Reset to the beginning
+                    currentlyPlaying.currentTime = 0;
 
-                    // Reset the play/pause icon and background of the previously playing song
-                    const prevButton = currentlyPlaying.closest('.play-button');
+                    // Reset the previous song's background
                     const prevSong = currentlyPlaying.closest('.song');
-                    if (prevButton) {
-                        const prevIcon = prevButton.querySelector('.play-icon');
-                        if (prevIcon) {
-                            prevIcon.classList.remove('fa-pause');
-                            prevIcon.classList.add('fa-play');
-                        }
-                    }
                     if (prevSong) {
-                        prevSong.style.backgroundSize = '0% 100%'; // Reset the green progress bar
+                        prevSong.style.background = ''; // Reset the progress bar to its default gray
                     }
                 }
 
-                // Play this audio
+                // Play this audio and start updating the background progress
                 audio.play().then(() => {
-                    console.log("Audio is now playing");
-
                     currentlyPlaying = audio;
 
                     if (playIcon) {
@@ -60,14 +50,17 @@ document.addEventListener("DOMContentLoaded", function () {
                         playIcon.classList.add('fa-pause');
                     }
 
-                    // Start updating the background progress
+                    // Function to update the progress bar
                     const updateProgress = () => {
                         const progressPercentage = (audio.currentTime / audio.duration) * 100;
-                        songElement.style.backgroundSize = `${progressPercentage}% 100%`; // Move the green overlay
+                        songElement.style.background = `linear-gradient(to right, rgba(0, 255, 0, 0.3) ${progressPercentage}%, #eaeaea 0%)`; // Green for played, gray for unplayed
                     };
 
-                    updateProgress(); // Initial call to set progress
-                    audio.addEventListener('timeupdate', updateProgress); // Keep updating progress during playback
+                    // Initial progress update
+                    updateProgress();
+
+                    // Continuously update the progress bar as the song plays
+                    audio.addEventListener('timeupdate', updateProgress);
 
                     // Reset background when the audio ends
                     audio.onended = () => {
@@ -75,23 +68,22 @@ document.addEventListener("DOMContentLoaded", function () {
                             playIcon.classList.remove('fa-pause');
                             playIcon.classList.add('fa-play');
                         }
-                        currentlyPlaying = null; // No audio playing
-                        songElement.style.backgroundSize = '0% 100%'; // Reset progress when audio ends
+                        currentlyPlaying = null;
+                        songElement.style.background = ''; // Reset to default when finished
                         console.log("Audio ended, icon and background reset");
                     };
                 }).catch(error => {
                     console.log("Error playing audio: ", error);
                 });
             } else {
-                // Pause the audio
                 audio.pause();
 
                 if (playIcon) {
                     playIcon.classList.remove('fa-pause');
                     playIcon.classList.add('fa-play');
                 }
-                currentlyPlaying = null; // No audio playing
-                console.log("Audio paused, icon and background reset");
+                currentlyPlaying = null;
+                console.log("Audio paused");
             }
         });
     });

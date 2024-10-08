@@ -128,11 +128,36 @@ button:hover {
     margin-bottom: 20px;
     padding: 10px;
     background-color: #eaeaea; /* The default gray background */
-    background-image: linear-gradient(to right, rgba(0, 255, 0, 0.3), transparent);
-    background-size: 0% 100%; /* Initially set the green bar width to 0 */
-    background-repeat: no-repeat;
+    background-image: none; /* Ensure no conflicting gradients */
+    background-color: #eaeaea;
     border-radius: 8px;
     transition: background-size 0.1s linear;
+    position: relative;
+    overflow: hidden; /* Ensure the background progress stays inside the song element */
+}
+
+.song::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: rgba(0, 255, 0, 0.3); /* Solid green bar */
+    z-index: 0;
+    transition: width 0.1s linear;
+    border-radius: 8px;
+}
+
+.song.playing::before {
+    width: 100%; /* The full width during playback progress */
+}
+
+.song-content {
+    z-index: 1; /* Ensure the content is above the progress bar */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .play-button {
@@ -144,6 +169,11 @@ button:hover {
 
 .play-icon {
     font-size: 18px;
+    min-width: 24px; /* Set a consistent width for both play and pause icons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5px;
 }
 
 .song-info {
