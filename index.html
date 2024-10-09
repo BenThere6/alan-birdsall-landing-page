@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alan Birdsall</title>
     <!-- Include Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,88 +13,68 @@
         <div class="header-image"></div>
         <div class="header-content">
             <h1>Alan Birdsall</h1>
-            <div class="current-music-container">
-                <div class="current-music">
-                    <div class="music-item">
-                        <img src="assets/template-cover-image.jpg" alt="Album 1" class="album-image">
-                        <h2>Album Title 1</h2>
-                        <button>Listen Now</button>
-                    </div>
-                </div>
-            </div>
         </div>
     </header>
 
-    <!-- Featured Album Songs Section -->
-    <section class="album-songs">
-        <h2 class="section-title">Featured Album - Songs</h2>
-        <ul class="song-list">
-            <!-- Song 1 -->
-            <li class="song">
-                <div class="song-content">
-                    <div class="play-button">
-                        <i class="fas fa-play play-icon"></i>
-                        <audio class="audio" src="assets/up-template-song.mp3"></audio>
-                    </div>
-                    <div class="song-info">
-                        <span class="song-name">Song Title 1</span>
-                        <span class="song-length"></span>
-                    </div>
+    <!-- Flex container for current music and featured album songs -->
+    <section class="music-and-songs-container">
+        <!-- Current Music Container -->
+        <div class="current-music-container">
+            <div class="current-music">
+                <div class="music-item">
+                    <img src="assets/template-cover-image.jpg" alt="Album 1" class="album-image">
+                    <h2>Album Title 1</h2>
+                    <button>Listen Now</button>
                 </div>
-            </li>
-            <!-- Song 2 -->
-            <li class="song">
-                <div class="song-content">
-                    <div class="play-button">
-                        <i class="fas fa-play play-icon"></i>
-                        <audio class="audio" src="assets/up-template-song.mp3"></audio>
+            </div>
+        </div>
+
+        <!-- Featured Album Songs Section -->
+        <div class="featured-songs">
+            <h2 class="section-title" id="songs-title">Featured Album - Songs</h2>
+            <ul class="song-list">
+                <!-- Song 1 -->
+                <li class="song">
+                    <div class="song-content">
+                        <div class="play-button">
+                            <i class="fas fa-play play-icon"></i>
+                            <audio class="audio" src="assets/up-template-song.mp3"></audio>
+                        </div>
+                        <div class="song-info">
+                            <span class="song-name">Song Title 1</span>
+                            <span class="song-length"></span>
+                        </div>
                     </div>
-                    <div class="song-info">
-                        <span class="song-name">Song Title 2</span>
-                        <span class="song-length"></span>
+                </li>
+                <!-- Song 2 -->
+                <li class="song">
+                    <div class="song-content">
+                        <div class="play-button">
+                            <i class="fas fa-play play-icon"></i>
+                            <audio class="audio" src="assets/up-template-song.mp3"></audio>
+                        </div>
+                        <div class="song-info">
+                            <span class="song-name">Song Title 2</span>
+                            <span class="song-length"></span>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <!-- Song 3 -->
-            <li class="song">
-                <div class="song-content">
-                    <div class="play-button">
-                        <i class="fas fa-play play-icon"></i>
-                        <audio class="audio" src="assets/up-template-song.mp3"></audio>
+                </li>
+                <!-- Song 3 -->
+                <li class="song">
+                    <div class="song-content">
+                        <div class="play-button">
+                            <i class="fas fa-play play-icon"></i>
+                            <audio class="audio" src="assets/up-template-song.mp3"></audio>
+                        </div>
+                        <div class="song-info">
+                            <span class="song-name">Song Title 3</span>
+                            <span class="song-length"></span>
+                        </div>
                     </div>
-                    <div class="song-info">
-                        <span class="song-name">Song Title 3</span>
-                        <span class="song-length"></span>
-                    </div>
-                </div>
-            </li>
-            <!-- Song 4 -->
-            <li class="song">
-                <div class="song-content">
-                    <div class="play-button">
-                        <i class="fas fa-play play-icon"></i>
-                        <audio class="audio" src="assets/up-template-song.mp3"></audio>
-                    </div>
-                    <div class="song-info">
-                        <span class="song-name">Song Title 4</span>
-                        <span class="song-length"></span>
-                    </div>
-                </div>
-            </li>
-            <!-- Song 5 -->
-            <li class="song">
-                <div class="song-content">
-                    <div class="play-button">
-                        <i class="fas fa-play play-icon"></i>
-                        <audio class="audio" src="assets/up-template-song.mp3"></audio>
-                    </div>
-                    <div class="song-info">
-                        <span class="song-name">Song Title 5</span>
-                        <span class="song-length"></span>
-                    </div>
-                </div>
-            </li>
-        </ul>
+                </li>
+                <!-- Additional Songs can go here -->
+            </ul>
+        </div>
     </section>
 
     <!-- Coming Soon Section -->
@@ -122,18 +102,6 @@
                 <img src="assets/template-cover-image.jpg" alt="Previous Album" class="album-image">
                 <h3>Album Title 4</h3>
                 <p>Released: January 2022</p>
-                <button>Listen Now</button>
-            </div>
-            <div class="previous-music-item">
-                <img src="assets/template-cover-image.jpg" alt="Previous Album" class="album-image">
-                <h3>Album Title 5</h3>
-                <p>Released: March 2021</p>
-                <button>Listen Now</button>
-            </div>
-            <div class="previous-music-item">
-                <img src="assets/template-cover-image.jpg" alt="Previous Album" class="album-image">
-                <h3>Album Title 5</h3>
-                <p>Released: March 2021</p>
                 <button>Listen Now</button>
             </div>
             <div class="previous-music-item">

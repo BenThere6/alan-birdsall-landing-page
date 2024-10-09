@@ -9,10 +9,10 @@ body {
 header {
     position: relative;
     width: 100vw;
-    height: 700px;
+    height: 300px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     box-sizing: border-box;
     padding-right: 50px;
     padding-left: 50px;
@@ -33,11 +33,10 @@ header {
 
 .header-content {
     color: white;
-    text-align: right;
+    text-align: center;
     max-width: 400px;
     width: 100%;
     box-sizing: border-box;
-    padding-right: 20px;
 }
 
 h1 {
@@ -45,21 +44,30 @@ h1 {
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     margin-bottom: 20px;
-    text-align: center;
-    line-height: 4.5rem;
+}
+
+.music-and-songs-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px; /* Space between current music and songs */
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .current-music-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    max-width: 100%;
+    flex: 1;
+}
+
+.featured-songs {
+    flex: 2;
 }
 
 .current-music {
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .music-item {
@@ -92,23 +100,39 @@ button:hover {
 
 .coming-soon-container,
 .previous-music-container {
-    margin: 40px 0 0 0;
+    margin: 0;
     padding: 20px;
     background-color: #fff;
-    /* border-radius: 10px; */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.coming-soon-container {
+    background-image: url('assets/template-piano-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.previous-music-container {
+    background-color: rgb(48,27,26);
+}
+
 .section-title {
+    color: white;
     font-size: 2rem;
     margin-bottom: 20px;
     text-align: center;
+}
+
+#songs-title {
+    color: black;
 }
 
 .item-container {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap; /* Allows flex items to wrap */
 }
 
 .coming-soon-item, .previous-music-item {
@@ -117,6 +141,7 @@ button:hover {
     text-align: center;
     border-radius: 10px;
     max-width: 200px;
+    width: 100%;
 }
 
 .coming-soon-item h3, .previous-music-item h3 {
@@ -135,7 +160,7 @@ button:hover {
 
 .song-list {
     list-style: none;
-    padding: 0 20px 0 20px;
+    padding: 0 20px 30px 20px;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -148,7 +173,6 @@ button:hover {
     justify-content: space-between;
     margin-bottom: 20px;
     padding: 10px;
-    background-color: #eaeaea; /* The default gray background */
     background-color: #eaeaea;
     border-radius: 8px;
     transition: background-size 0.1s linear;
@@ -172,11 +196,11 @@ button:hover {
 }
 
 .song.playing::before {
-    width: 100%; /* The full width during playback progress */
+    width: 100%;
 }
 
 .song-content {
-    z-index: 1; /* Ensure the content is above the progress bar */
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -191,7 +215,7 @@ button:hover {
 
 .play-icon {
     font-size: 18px;
-    min-width: 24px; /* Set a consistent width for both play and pause icons */
+    min-width: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
