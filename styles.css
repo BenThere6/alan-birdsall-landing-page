@@ -1,6 +1,7 @@
 :root {
     --main-color: rgb(48, 27, 26);
     --secondary-color: rgb(192, 192, 59);
+    --light-transparent-bg: rgba(255, 255, 255, 0.172); /* New light transparent background */
 }
 
 body {
@@ -71,7 +72,7 @@ h1 {
     align-items: center;
     gap: 20px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--light-transparent-bg); /* Apply light transparent background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -115,7 +116,7 @@ button:hover {
 .previous-music-container {
     margin: 0 0 0 0;
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--light-transparent-bg); /* Apply the light transparent background */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -150,7 +151,7 @@ button:hover {
 
 .coming-soon-item,
 .previous-music-item {
-    background-color: #f0f0f0;
+    background-color: var(--light-transparent-bg);
     padding: 20px;
     text-align: center;
     border-radius: 10px;
