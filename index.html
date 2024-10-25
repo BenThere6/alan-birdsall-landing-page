@@ -3,150 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alan Birdsall</title>
-    <!-- Include Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>Musician Landing Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; }
+        header, footer { background: #222; color: #fff; padding: 20px; text-align: center; }
+        main { padding: 20px; max-width: 800px; margin: auto; }
+        h1, h2 { color: #444; }
+        .hero { display: flex; align-items: center; justify-content: center; flex-direction: column; }
+        .hero img { max-width: 200px; border-radius: 50%; margin-bottom: 15px; }
+        .music-sample, .coming-soon, .story-section { margin-top: 40px; }
+        .music-sample img { max-width: 100%; margin: 20px 0; }
+        footer .social, footer .platforms { margin-top: 10px; }
+        footer .social a, footer .platforms a { margin: 0 5px; color: #fff; text-decoration: none; }
+    </style>
 </head>
 <body>
+
+    <!-- Header Section -->
     <header>
-        <div class="header-image"></div>
-        <div class="header-content">
-            <h1>Alan Birdsall</h1>
-        </div>
+        <h1>Alan Birdsall</h1>
+        <p>Discover the latest music, stories, and more</p>
     </header>
 
-    <!-- Current Music Section Above Featured Songs -->
-    <div class="current-music-container">
-        <div class="current-music">
-            <div class="album-image-container">
-                <img src="assets/template-cover-image.jpg" alt="Album 1" class="album-image">
-            </div>
-            <div class="music-info">
-                <h2>Album Title 1</h2>
-                <button>Listen Now</button>
-            </div>
-        </div>
-    </div>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="assets/portrait.jpg" alt="Musician Portrait"> <!-- Add portrait image file here -->
+            <p>Musician's tagline or introduction goes here.</p>
+        </section>
 
-    <!-- Featured Album Songs Section -->
-    <section class="album-songs">
-        <h2 class="section-title" id="songs-title">Songs (Samples)</h2>
-        <ul class="song-list">
-            <!-- Song 1 -->
-            <li class="song">
-                <div class="song-content">
-                    <div class="play-button">
-                        <i class="fas fa-play play-icon"></i>
-                        <audio class="audio" src="assets/up-template-song.mp3"></audio>
-                    </div>
-                    <div class="song-info">
-                        <span class="song-name">Song Title 1</span>
-                        <span class="song-length"></span>
-                    </div>
-                </div>
-            </li>
-            <!-- Song 2 -->
-            <li class="song">
-                <div class="song-content">
-                    <div class="play-button">
-                        <i class="fas fa-play play-icon"></i>
-                        <audio class="audio" src="assets/up-template-song.mp3"></audio>
-                    </div>
-                    <div class="song-info">
-                        <span class="song-name">Song Title 2</span>
-                        <span class="song-length"></span>
-                    </div>
-                </div>
-            </li>
-            <!-- Song 3 -->
-            <li class="song">
-                <div class="song-content">
-                    <div class="play-button">
-                        <i class="fas fa-play play-icon"></i>
-                        <audio class="audio" src="assets/up-template-song.mp3"></audio>
-                    </div>
-                    <div class="song-info">
-                        <span class="song-name">Song Title 3</span>
-                        <span class="song-length"></span>
-                    </div>
-                </div>
-            </li>
-            <!-- Song 4 -->
-            <li class="song">
-                <div class="song-content">
-                    <div class="play-button">
-                        <i class="fas fa-play play-icon"></i>
-                        <audio class="audio" src="assets/up-template-song.mp3"></audio>
-                    </div>
-                    <div class="song-info">
-                        <span class="song-name">Song Title 4</span>
-                        <span class="song-length"></span>
-                    </div>
-                </div>
-            </li>
-            <!-- Song 5 -->
-            <li class="song">
-                <div class="song-content">
-                    <div class="play-button">
-                        <i class="fas fa-play play-icon"></i>
-                        <audio class="audio" src="assets/up-template-song.mp3"></audio>
-                    </div>
-                    <div class="song-info">
-                        <span class="song-name">Song Title 5</span>
-                        <span class="song-length"></span>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </section>
+        <!-- Music Sample Section -->
+        <section class="music-sample">
+            <h2>Latest Single</h2>
+            <img src="assets/i-know-that-my-redeemer-lives-cover-art.jpg" alt="Single Cover Art"> <!-- Add cover art image file here -->
+            <audio id="audio-sample" controls>
+                <source src="assets/i-know-that-my-redeemer-lives-master.mp3" type="audio/mpeg"> <!-- Full MP3 file -->
+                Your browser does not support the audio element.
+            </audio>
+            <!-- <p>Release date of the next singles: [Add release dates]</p> -->
+        </section>
 
-    <!-- Coming Soon Section -->
-    <div class="coming-soon-container">
-        <h2 class="section-title">Coming Soon</h2>
-        <div class="item-container">
-            <div class="coming-soon-item">
-                <img src="assets/template-cover-image.jpg" alt="Cover Image" class="album-image">
-                <h3>Album Title 2</h3>
-                <p>Release Date: Coming Soon</p>
-            </div>
-            <div class="coming-soon-item">
-                <img src="assets/template-cover-image.jpg" alt="Cover Image" class="album-image">
-                <h3>Album Title 3</h3>
-                <p>Release Date: Coming Soon</p>
-            </div>
-        </div>
-    </div>
+        <!-- About the Music Section -->
+        <section class="story-section">
+            <h2>Stories Behind the Songs</h2>
+            <p>[Add song stories here]</p> <!-- Add each song's story here -->
+        </section>
 
-    <!-- Previous Albums Section -->
-    <div class="previous-music-container">
-        <h2 class="section-title">Previous Albums</h2>
-        <div class="item-container">
-            <div class="previous-music-item">
-                <img src="assets/template-cover-image.jpg" alt="Previous Album" class="album-image">
-                <h3>Album Title 4</h3>
-                <p>Released: January 2022</p>
-                <button>Listen Now</button>
-            </div>
-            <div class="previous-music-item">
-                <img src="assets/template-cover-image.jpg" alt="Previous Album" class="album-image">
-                <h3>Album Title 5</h3>
-                <p>Released: March 2021</p>
-                <button>Listen Now</button>
-            </div>
-            <div class="previous-music-item">
-                <img src="assets/template-cover-image.jpg" alt="Previous Album" class="album-image">
-                <h3>Album Title 6</h3>
-                <p>Released: March 2020</p>
-                <button>Listen Now</button>
-            </div>
-        </div>
-    </div>
+        <!-- Coming Soon Section -->
+        <section class="coming-soon">
+            <h2>Coming Soon</h2>
+            <p>Upcoming releases and album details.</p>
+            <p>[Add details about upcoming singles or album release here]</p>
+        </section>
+    </main>
 
+    <!-- Footer Section -->
     <footer>
-        <div class="icons">Footer Icons</div>
+        <!-- Credits Section -->
+        <p>&copy; [2024] Alan Birdsall. All rights reserved.</p>
+        <p>Credits: [Add any acknowledgments or production credits]</p>
+
+        <!-- Social Media Links -->
+        <div class="social">
+            <h3>Follow</h3>
+            <a href="[Facebook URL]" target="_blank">Facebook</a>
+            <a href="[Instagram URL]" target="_blank">Instagram</a>
+        </div>
+
+        <!-- Music Platform Links -->
+        <div class="platforms">
+            <h3>Listen on</h3>
+            <a href="[Spotify URL]" target="_blank">Spotify</a>
+            <a href="[Apple Music URL]" target="_blank">Apple Music</a>
+            <a href="[Amazon Music URL]" target="_blank">Amazon Music</a>
+            <a href="[Pandora URL]" target="_blank">Pandora</a>
+            <a href="[YouTube URL]" target="_blank">YouTube</a>
+        </div>
     </footer>
 
-    <script src="scripts.js"></script>
+    <!-- JavaScript to control audio sample playback with fade out -->
+    <script>
+        const audio = document.getElementById('audio-sample');
+        const sampleStart = (60 * 3) + 22; // Start at 3:22
+        const sampleDuration = 20; // Duration of sample in seconds
+        const fadeDuration = 5; // Duration of fade out in seconds
+        const fadeStart = sampleDuration - fadeDuration; // When the fade should start (at 15s of the sample)
+
+        let fadeInterval;
+
+        audio.addEventListener('play', () => {
+            // Set the start time
+            audio.currentTime = sampleStart;
+            audio.volume = 1; // Reset volume to full at start
+
+            // Stop the audio after the sample duration
+            setTimeout(() => {
+                if (audio.currentTime >= sampleStart + sampleDuration) {
+                    audio.pause();
+                    clearInterval(fadeInterval); // Stop the fade out process if still running
+                }
+            }, sampleDuration * 1000); // Convert seconds to milliseconds
+        });
+
+        // Time update to handle fade out and reset
+        audio.addEventListener('timeupdate', () => {
+            if (audio.currentTime >= sampleStart + fadeStart) {
+                // Begin fading out over the last 5 seconds
+                if (!fadeInterval) {
+                    fadeInterval = setInterval(() => {
+                        if (audio.volume > 0.05) {
+                            audio.volume -= 0.05; // Gradually decrease volume
+                        } else {
+                            audio.volume = 0;
+                            clearInterval(fadeInterval); // Stop fade once fully faded
+                        }
+                    }, (fadeDuration / 20) * 1000); // Divide fade duration for smoother fade steps
+                }
+            }
+
+            if (audio.currentTime >= sampleStart + sampleDuration) {
+                audio.pause();
+                audio.currentTime = sampleStart; // Reset to start for replay
+                audio.volume = 1; // Reset volume for next play
+                clearInterval(fadeInterval); // Ensure fade is cleared
+            }
+        });
+
+    </script>
+
 </body>
 </html>
