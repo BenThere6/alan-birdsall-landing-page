@@ -1,0 +1,248 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* ----- Section Above Navigation ----- */
+
+.sectionAboveNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 40px 20px; /* Extra padding for larger spacing */
+    background-color: #f9f9f9; /* Light background for contrast */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.portraitContainer,
+.introContainer {
+    flex: 1 1 50%; /* Each item takes 50% width on larger screens */
+    max-width: 500px; /* Optional max-width for very large screens */
+    display: flex;
+    justify-content: center; /* Center content within each container */
+    align-items: center;
+    margin-bottom: 20px; /* Space below on smaller screens */
+}
+
+.portraitContainer {
+    height: auto;
+    max-width: 300px; /* Limit portrait size for balance */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+.portraitContainer img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure image fills container without distortion */
+    border-radius: 10px; /* Optional rounded corners for the image */
+}
+
+.introContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack the name and titles vertically */
+    align-items: center; /* Center align the content within the intro container */
+}
+
+.artistName {
+    font-size: 3rem; /* Larger font size for the name */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px; /* Space between name and titles */
+}
+
+.artistTitles {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0; /* Space above to separate from artist name */
+}
+
+.artistTitles li {
+    font-size: 1.25rem; /* Slightly larger font size for titles */
+    color: #555;
+    margin-top: 5px; /* Small space between titles */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sectionAboveNav {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center;
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .portraitContainer,
+    .introContainer {
+        flex: 1 1 100%; /* Each item takes full width on smaller screens */
+        max-width: 100%; /* Allow full width on small screens */
+    }
+
+    .artistName {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .artistTitles li {
+        font-size: 1rem; /* Adjust font size for titles on smaller screens */
+    }
+}
+
+/* ----- Navigation ----- */
+
+nav {
+    background-color: #333; /* Dark background color */
+    padding: 15px 0; /* Vertical padding for spacing */
+    position: sticky; /* Stick the nav when it reaches the top */
+    top: 0; /* Position it at the top of the viewport when sticky */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays above other elements when sticky */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for subtle depth effect */
+}
+
+.navContainer {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navItem {
+    color: #f9f9f9;
+    font-size: 1.2rem;
+    margin: 0 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navItem:hover {
+    color: #f39c12;
+}
+
+/* ----- Featured Section ----- */
+
+#featuredSection {
+    max-width: 1024px; /* Set max width for the section */
+    margin: 0 auto; /* Center the section horizontally */
+    padding: 40px 20px; /* Add some padding for spacing */
+    text-align: center; /* Center-align all text inside this section */
+}
+
+.coverImageContainer {
+    max-width: 300px; /* Limit the size of the cover image */
+    margin: 0 auto 20px; /* Center the image and add bottom margin */
+}
+
+.coverImageContainer img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+.songName {
+    font-size: 2rem; /* Larger font size for the song name */
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px; /* Space above the song name */
+    max-width: 500px; /* Limit the width for readability */
+    margin: 20px auto; /* Center and add spacing */
+}
+
+.songArtists {
+    font-size: 1.2rem; /* Slightly smaller font for artist name */
+    color: #555;
+    margin-top: 10px; /* Space above the artist name */
+    max-width: 500px; /* Limit the width for readability */
+    margin: 10px auto; /* Center and add spacing */
+}
+
+.audio-sample {
+    max-width: 500px; /* Limit the width of the audio player */
+    margin: 20px auto; /* Center and add spacing */
+    display: block; /* Ensure it aligns with centered content */
+}
+
+/* ----- Coming Soon Section ----- */
+
+#comingSoonSection {
+    /* Styles for coming soon section */
+}
+
+.sectionTitle {
+    /* Styles for section titles (e.g., Coming Soon) */
+}
+
+.releaseContainer {
+    /* Styles for each release container */
+}
+
+.releaseType {
+    /* Styles for release type (e.g., SINGLE) */
+}
+
+.estReleaseDate {
+    /* Styles for estimated release date */
+}
+
+/* ----- Contact Section ----- */
+
+#contactSection {
+    /* Styles for contact section */
+}
+
+.contactMessage {
+    /* Styles for contact message text */
+}
+
+.contactEmail {
+    /* Styles for contact email */
+}
+
+/* ----- Footer ----- */
+
+footer {
+    /* Styles for footer container */
+}
+
+.creditsContainer {
+    /* Styles for credits container */
+}
+
+.creditItem {
+    /* Styles for each credit item */
+}
+
+.creditTitle {
+    /* Styles for credit titles (e.g., Artwork) */
+}
+
+.creditButton {
+    /* Styles for credit buttons (links to external websites) */
+}
+
+.creditName {
+    /* Styles for credit names */
+}
+
+/* ----- Social Media Links ----- */
+
+.socials {
+    /* Styles for social media links container */
+}
+
+.platforms {
+    /* Styles for music platform links container */
+}
+
+.platforms a, .socials a {
+    /* General styles for links in social and platform sections */
+}
