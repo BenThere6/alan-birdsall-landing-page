@@ -12,6 +12,8 @@ html {
 /* Global Styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f5e6d3;
+    color: #333;
 }
 
 /* ----- Section Above Navigation as Cover Photo ----- */
@@ -202,6 +204,10 @@ footer {
     font-size: 0.9rem; /* Slightly smaller font size for a compact look */
     margin-top: 20px; /* Space above the footer */
     border-top: 2px solid #444; /* Optional border at the top for separation */
+}
+
+.copyrightLine {
+    padding-bottom: 50px;
 }
 
 /* Container for credits */
