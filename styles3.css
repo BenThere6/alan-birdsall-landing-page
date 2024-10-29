@@ -110,16 +110,14 @@ nav {
 
 /* ----- Coming Soon Section ----- */
 
-/* ----- Coming Soon Section ----- */
-
 #comingSoonSection {
     max-width: 1024px; /* Set a maximum width */
     margin: 0 auto; /* Center the section */
     padding: 40px 20px; /* Add padding for spacing */
     text-align: center; /* Center-align all text */
-    background-color: #f8f8f8; /* Light background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    border-radius: 10px; /* Rounded corners for a smooth look */
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
     margin-top: 20px; /* Space above the section */
 }
 
@@ -294,9 +292,9 @@ footer {
     margin: 0 auto; /* Center the section */
     padding: 40px 20px; /* Add padding for spacing */
     text-align: center; /* Center-align all text */
-    background-color: #f8f8f8; /* Light background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    border-radius: 10px; /* Rounded corners for a smooth look */
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0; /* Rounded corners for a smooth look */
     margin-top: 20px; /* Space above the section */
 }
 
@@ -326,4 +324,14 @@ footer {
 .contactButton:hover {
     background-color: #f39c12; /* Lighter color on hover */
     color: #fff; /* Keep text color white */
+}
+
+
+/* ----- Additional Styles ----- */
+
+.divider {
+    width: 90%; /* Not full width for a balanced look */
+    height: 2px; /* Thin line for subtle separation */
+    background-color: black; /* Black color for contrast */
+    margin: 30px auto; /* Center and add vertical spacing */
 }
