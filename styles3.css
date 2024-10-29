@@ -20,46 +20,39 @@ body {
     background-size: cover; /* Make the image cover the entire section */
     background-position: center 30%; /* Shift background to start at 30% from the top */
     display: flex;
-    align-items: flex-end; /* Align items to the bottom */
-    justify-content: flex-end; /* Align items to the right */
-    color: white; /* White text for contrast */
-    text-align: center;
+    align-items: center; /* Center content vertically */
+    justify-content: flex-start; /* Align items to the left */
+    padding-left: 40px; /* Add padding from the left side */
 }
 
+/* Hide portraitContainer since the background image is used as a cover */
 .portraitContainer {
-    display: none; /* Hide portraitContainer since it's now a background image */
+    display: none;
 }
 
-.introContainer {
-    position: absolute;
-    bottom: 20px; /* Position from the bottom */
-    right: 20px; /* Position from the right */
-    z-index: 1; /* Ensure text stays above the background */
-    padding: 15px 20px; /* Padding for spacing within the container */
-    border-radius: 8px;
-    text-align: right; /* Align text within the container to the right */
+/* Style for the logo container */
+.logoContainer {
+    position: relative;
+    z-index: 1;
+    text-align: left;
 }
 
-.artistName {
-    font-family: 'Tangerine', cursive;
-    font-size: 5rem; /* Large font size for the artist name */
-    font-weight: bold;
-    color: #fff; /* White text color for contrast */
-    margin-bottom: 0;
+/* Styling for the logo image */
+.logoContainer img {
+    width: auto;
+    height: 100px; /* Adjust the height as needed */
+    margin-left: 10px; /* Adjust positioning on the left */
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .sectionAboveNav {
         height: 300px; /* Adjust height for smaller screens */
+        padding-left: 20px; /* Reduce left padding on smaller screens */
     }
 
-    .artistName {
-        font-size: 3rem; /* Adjust font size for smaller screens */
-    }
-
-    .artistTitles li {
-        font-size: 1rem; /* Adjust font size for titles on smaller screens */
+    .logoContainer img {
+        height: 80px; /* Adjust height for smaller screens */
     }
 }
 
@@ -117,63 +110,10 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
 }
 
-.songName {
-    font-size: 2rem; /* Larger font size for the song name */
-    font-weight: bold;
-    color: #333;
-    margin-top: 20px; /* Space above the song name */
-    max-width: 500px; /* Limit the width for readability */
-    margin: 20px auto; /* Center and add spacing */
-}
-
-.songArtists {
-    font-size: 1.2rem; /* Slightly smaller font for artist name */
-    color: #555;
-    margin-top: 10px; /* Space above the artist name */
-    max-width: 500px; /* Limit the width for readability */
-    margin: 10px auto; /* Center and add spacing */
-}
-
-.audio-sample {
-    max-width: 500px; /* Limit the width of the audio player */
-    margin: 20px auto; /* Center and add spacing */
-    display: block; /* Ensure it aligns with centered content */
-}
-
 /* ----- Coming Soon Section ----- */
 
 #comingSoonSection {
     /* Styles for coming soon section */
-}
-
-.sectionTitle {
-    /* Styles for section titles (e.g., Coming Soon) */
-}
-
-.releaseContainer {
-    /* Styles for each release container */
-}
-
-.releaseType {
-    /* Styles for release type (e.g., SINGLE) */
-}
-
-.estReleaseDate {
-    /* Styles for estimated release date */
-}
-
-/* ----- Contact Section ----- */
-
-#contactSection {
-    /* Styles for contact section */
-}
-
-.contactMessage {
-    /* Styles for contact message text */
-}
-
-.contactEmail {
-    /* Styles for contact email */
 }
 
 /* ----- Footer ----- */
@@ -182,36 +122,4 @@ footer {
     /* Styles for footer container */
 }
 
-.creditsContainer {
-    /* Styles for credits container */
-}
-
-.creditItem {
-    /* Styles for each credit item */
-}
-
-.creditTitle {
-    /* Styles for credit titles (e.g., Artwork) */
-}
-
-.creditButton {
-    /* Styles for credit buttons (links to external websites) */
-}
-
-.creditName {
-    /* Styles for credit names */
-}
-
-/* ----- Social Media Links ----- */
-
-.socials {
-    /* Styles for social media links container */
-}
-
-.platforms {
-    /* Styles for music platform links container */
-}
-
-.platforms a, .socials a {
-    /* General styles for links in social and platform sections */
-}
+/* Additional Styles */
