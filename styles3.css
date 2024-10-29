@@ -191,8 +191,102 @@ nav {
 
 /* ----- Footer ----- */
 
+/* ----- Footer ----- */
+
 footer {
-    /* Styles for footer container */
+    background-color: #333; /* Dark background color for contrast */
+    color: #f1f1f1; /* Light text color for readability */
+    padding: 40px 20px; /* Padding for spacing */
+    text-align: center; /* Center-align text */
+    font-size: 0.9rem; /* Slightly smaller font size for a compact look */
+    margin-top: 20px; /* Space above the footer */
+    border-top: 2px solid #444; /* Optional border at the top for separation */
+}
+
+/* Container for credits */
+.creditsContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 20px; /* Space below the credits section */
+    text-align: left; /* Align text to the left */
+}
+
+.creditsContainer h3 {
+    font-size: 1.2rem; /* Slightly larger font for section title */
+    font-weight: bold;
+    color: #f9c74f; /* Optional accent color for section title */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.creditItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px; /* Space between each credit item */
+    color: #ddd; /* Light text color */
+}
+
+.creditTitle {
+    font-weight: bold;
+}
+
+.creditButton, .creditName {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.creditButton:hover {
+    color: #f39c12; /* Highlight color on hover */
+    text-decoration: underline; /* Underline on hover for links */
+}
+
+/* Social Media Links Section */
+.socials {
+    margin-top: 30px;
+}
+
+.socials h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f9c74f;
+    margin-bottom: 10px;
+}
+
+.socials a {
+    color: #f1f1f1;
+    margin: 0 10px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: #f39c12;
+}
+
+/* Music Platform Links Section */
+.platforms {
+    margin-top: 20px;
+}
+
+.platforms h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f9c74f;
+    margin-bottom: 10px;
+}
+
+.platforms a {
+    color: #f1f1f1;
+    margin: 0 10px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.platforms a:hover {
+    color: #f39c12;
 }
 
 /* Additional Styles */
