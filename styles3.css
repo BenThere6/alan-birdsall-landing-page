@@ -20,9 +20,8 @@ body {
     background-size: cover; /* Make the image cover the entire section */
     background-position: center 30%; /* Shift background to start at 30% from the top */
     display: flex;
-    align-items: center; /* Center content vertically */
-    justify-content: flex-start; /* Align items to the left */
-    padding-left: 40px; /* Add padding from the left side */
+    align-items: flex-end; /* Align items to the bottom */
+    justify-content: center; /* Center items horizontally */
 }
 
 /* Hide portraitContainer since the background image is used as a cover */
@@ -32,23 +31,22 @@ body {
 
 /* Style for the logo container */
 .logoContainer {
-    position: relative;
+    position: absolute;
+    bottom: 50px; /* Position it slightly above the bottom of the section */
     z-index: 1;
-    text-align: left;
+    text-align: center;
 }
 
 /* Styling for the logo image */
 .logoContainer img {
     width: auto;
     height: 100px; /* Adjust the height as needed */
-    margin-left: 10px; /* Adjust positioning on the left */
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .sectionAboveNav {
         height: 300px; /* Adjust height for smaller screens */
-        padding-left: 20px; /* Reduce left padding on smaller screens */
     }
 
     .logoContainer img {
