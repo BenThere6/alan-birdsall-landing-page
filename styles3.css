@@ -110,8 +110,83 @@ nav {
 
 /* ----- Coming Soon Section ----- */
 
+/* ----- Coming Soon Section ----- */
+
 #comingSoonSection {
-    /* Styles for coming soon section */
+    max-width: 1024px; /* Set a maximum width */
+    margin: 0 auto; /* Center the section */
+    padding: 40px 20px; /* Add padding for spacing */
+    text-align: center; /* Center-align all text */
+    background-color: #f8f8f8; /* Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    border-radius: 10px; /* Rounded corners for a smooth look */
+    margin-top: 20px; /* Space above the section */
+}
+
+.sectionTitle {
+    font-size: 2rem; /* Large font size for section title */
+    font-weight: bold;
+    color: #333; /* Dark text color */
+    margin-bottom: 20px; /* Space below title */
+}
+
+.releaseContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between items */
+}
+
+.releaseType {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #888; /* Subtle color for type label */
+    letter-spacing: 1px; /* Slight spacing */
+    text-transform: uppercase;
+}
+
+.coverImageContainer {
+    max-width: 300px; /* Limit size of the cover image container */
+    margin-bottom: 10px; /* Space below cover image */
+    position: relative;
+}
+
+.coverImageContainer img.coverImage {
+    width: 100%; /* Full width within container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+.songName {
+    font-size: 1.5rem; /* Medium font size */
+    font-weight: bold;
+    color: #333; /* Dark color for song name */
+    margin: 10px 0; /* Space around song name */
+}
+
+.estReleaseDate {
+    font-size: 1rem;
+    color: #555; /* Slightly muted color for release date */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    #comingSoonSection {
+        padding: 20px 10px; /* Reduce padding */
+    }
+
+    .coverImageContainer {
+        max-width: 200px; /* Smaller image size on mobile */
+    }
+
+    .sectionTitle {
+        font-size: 1.5rem; /* Adjust font size for section title */
+    }
+
+    .songName {
+        font-size: 1.2rem; /* Adjust font size for song name */
+    }
 }
 
 /* ----- Footer ----- */
