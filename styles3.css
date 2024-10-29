@@ -191,8 +191,6 @@ nav {
 
 /* ----- Footer ----- */
 
-/* ----- Footer ----- */
-
 footer {
     background-color: #333; /* Dark background color for contrast */
     color: #f1f1f1; /* Light text color for readability */
@@ -289,4 +287,43 @@ footer {
     color: #f39c12;
 }
 
-/* Additional Styles */
+/* ----- Contact Section ----- */
+
+#contactSection {
+    max-width: 1024px; /* Set a maximum width */
+    margin: 0 auto; /* Center the section */
+    padding: 40px 20px; /* Add padding for spacing */
+    text-align: center; /* Center-align all text */
+    background-color: #f8f8f8; /* Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    border-radius: 10px; /* Rounded corners for a smooth look */
+    margin-top: 20px; /* Space above the section */
+}
+
+.contactMessage {
+    font-size: 1.2rem; /* Font size for the invitation text */
+    color: #333; /* Dark text color */
+    margin-bottom: 20px; /* Space below the message */
+}
+
+.contactButtonContainer {
+    margin-top: 10px; /* Add some space above the button */
+}
+
+.contactButton {
+    display: inline-block;
+    padding: 15px 30px; /* Spacing inside the button */
+    font-size: 1.2rem; /* Font size for the button text */
+    font-weight: bold;
+    color: #fff; /* Text color */
+    background-color: #333; /* Button background color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.contactButton:hover {
+    background-color: #f39c12; /* Lighter color on hover */
+    color: #fff; /* Keep text color white */
+}
