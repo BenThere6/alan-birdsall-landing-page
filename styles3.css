@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Global Styles */
 body {
     font-family: Arial, sans-serif;
@@ -81,6 +85,7 @@ nav {
     text-transform: uppercase;
     cursor: pointer;
     transition: color 0.3s ease;
+    text-decoration: none;
 }
 
 .navItem:hover {
