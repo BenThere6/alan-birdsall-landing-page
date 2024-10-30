@@ -115,6 +115,11 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
 }
 
+#audio-sample {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 /* ----- Coming Soon Section ----- */
 
 #comingSoonSection {
@@ -132,7 +137,7 @@ nav {
     font-size: 2rem; /* Large font size for section title */
     font-weight: bold;
     color: #333; /* Dark text color */
-    margin-bottom: 20px; /* Space below title */
+    margin-bottom: 10px; /* Space below title */
 }
 
 .releaseContainer {
@@ -167,7 +172,7 @@ nav {
     font-size: 1.5rem; /* Medium font size */
     font-weight: bold;
     color: #333; /* Dark color for song name */
-    margin: 10px 0; /* Space around song name */
+    margin: 0 0; /* Space around song name */
 }
 
 .estReleaseDate {
