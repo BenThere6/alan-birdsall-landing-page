@@ -147,6 +147,13 @@ nav {
     margin-bottom: 30px; /* Add space between each release */
 }
 
+/* Container for all releases */
+.allReleases {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Increase spacing between releases */
+}
+
 .releaseType {
     font-size: 1rem;
     font-weight: bold;
@@ -220,37 +227,49 @@ footer {
     max-width: 800px;
     margin: 0 auto;
     margin-bottom: 20px; /* Space below the credits section */
-    text-align: left; /* Align text to the left */
+    text-align: left;
 }
 
 .creditsContainer h3 {
-    font-size: 1.2rem; /* Slightly larger font for section title */
+    font-size: 1.2rem;
     font-weight: bold;
-    color: #f9c74f; /* Optional accent color for section title */
+    color: #f9c74f;
     margin-bottom: 10px; /* Space below the title */
 }
 
 .creditItem {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 8px; /* Space between each credit item */
-    color: #ddd; /* Light text color */
+    color: #ddd;
 }
 
 .creditTitle {
     font-weight: bold;
+    padding-right: 10px; /* Adds space between title and dots */
 }
 
-.creditButton, .creditName {
+.dottedLine {
+    flex-grow: 1; /* Expands to fill the available space */
+    border-bottom: 1px dotted #ddd; /* Dotted line effect */
+    margin: 0 10px; /* Space on each side of the line */
+}
+
+.creditName {
+    flex-shrink: 0; /* Keeps the name aligned to the right */
     color: #f1f1f1;
     text-decoration: none;
     font-size: 0.9rem;
 }
 
+.creditButton {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
 .creditButton:hover {
     color: #f39c12; /* Highlight color on hover */
-    text-decoration: underline; /* Underline on hover for links */
+    text-decoration: underline;
 }
 
 /* Social Media Links Section */
