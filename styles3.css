@@ -120,6 +120,26 @@ nav {
     margin-bottom: 20px;
 }
 
+.presave-button {
+    display: inline-block;
+    padding: 15px 30px; /* Spacing inside the button */
+    font-size: 1.2rem; /* Font size for the button text */
+    font-weight: bold;
+    color: #fff; /* Text color */
+    background-color: #333; /* Button background color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    cursor: pointer; /* Adds pointer cursor on hover */
+    margin-top: 20px;
+}
+
+.presave-button:hover {
+    background-color: #f39c12; /* Lighter color on hover */
+    color: #fff; /* Keep text color white */
+}
+
 /* ----- Coming Soon Section ----- */
 
 #comingSoonSection {
