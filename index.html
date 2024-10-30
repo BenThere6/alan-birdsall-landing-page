@@ -1,104 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alan Birdsall</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; }
-        header, footer { background: #222; color: #fff; padding: 20px; text-align: center; }
-        main { padding: 20px; max-width: 800px; margin: auto; }
-        h1, h2 { color: #444; }
-
-        /* Hero Section with Blurred Background */
-        .hero {
-            position: relative;
-            height: 700px; /* Adjust as needed */
-            width: 100%;
-            background-image: url('assets/portrait.jpg'); /* Blurred background version */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('assets/portrait.jpg'); /* Same image for the blur */
-            background-size: cover;
-            background-position: center;
-            filter: blur(20px); /* Blur the background */
-            z-index: 1;
-        }
-
-        .hero img {
-            position: relative;
-            z-index: 2; /* Keep the main image above the blurred background */
-            max-height: 100%;
-            max-width: auto; /* Ensure the portrait scales well */
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Add a shadow to make it pop */
-        }
-
-        .music-sample, .coming-soon, .story-section { margin-top: 40px; }
-        .music-sample img { max-width: 100%; margin: 20px 0; }
-        footer .social, footer .platforms { margin-top: 10px; }
-        footer .social a, footer .platforms a { margin: 0 5px; color: #fff; text-decoration: none; }
-    </style>
+    <link rel="stylesheet" href="styles3.css">
 </head>
+
 <body>
+    <div class="sectionAboveNav">
+        <div class="portraitContainer">
+            <img src="assets/portrait.png" alt="Musician Portrait">
+        </div>
+        <div class="logoContainer">
+            <img src="assets/logo.png" alt="Alan Birdsall Logo">
+        </div>
+    </div>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Alan Birdsall</h1>
-    </header>
+    <nav>
+        <ul class="navContainer">
+            <li><a href="#featuredSection" class="navItem">Featured</a></li>
+            <li><a href="#comingSoonSection" class="navItem">Coming Soon</a></li>
+            <li><a href="#contactSection" class="navItem">Contact</a></li>
+        </ul>
+    </nav>
 
-    <!-- Hero Section with Full-width Image and Blurred Background -->
-    <section class="hero">
-        <img src="assets/portrait.jpg" alt="Musician Portrait"> <!-- Add portrait image file here -->
-    </section>
-
-    <!-- Main Content -->
-    <main>
-        <!-- Music Sample Section -->
-        <section class="music-sample">
-            <h2>Latest Single</h2>
-            <img src="assets/i-know-that-my-redeemer-lives-cover-art.jpg" alt="Single Cover Art"> <!-- Add cover art image file here -->
+    <div id="featuredSection">
+        <div class="playerContainer">
+            <div class="coverImageContainer">
+                <img src="assets/i-know-that-my-redeemer-lives-cover-art.jpg" alt="Single Cover Art">
+            </div>
+            <div class="songName">
+                I Know That My Redeemer Lives
+            </div>
+            <div class="songArtists">
+                Alan Birdsall
+            </div>
             <audio id="audio-sample" controls>
-                <source src="assets/i-know-that-my-redeemer-lives-master.mp3" type="audio/mpeg"> <!-- Full MP3 file -->
+                <source src="assets/i-know-that-my-redeemer-lives-master.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
-        </section>
+            <div class="songStory">
+                Here is the story of I Know That My Redeemer Lives
+            </div>
+            <div class="presaveContainer">
+                <a href="https://show.co/social-unlock/2AFB9Mbaz0Q7gJ7XYxyptj/widget" target="_blank"
+                    class="presave-button">
+                    Presave on Spotify!
+                </a>
+            </div>
+        </div>
+    </div>
 
-        <!-- About the Music Section -->
-        <section class="story-section">
-            <h2>Stories Behind the Songs</h2>
-            <p>[Add song stories here]</p> <!-- Add each song's story here -->
-        </section>
+    <div class="divider"></div>
 
-        <!-- Coming Soon Section -->
-        <section class="coming-soon">
-            <h2>Coming Soon</h2>
-            <p>Upcoming releases and album details.</p>
-            <p>[Add details about upcoming singles or album release here]</p>
-        </section>
-    </main>
+    <div id="comingSoonSection">
+        <div class="sectionTitle">Coming Soon</div>
+        <div class="allReleases">
+            <div class="releaseContainer">
+                <div class="releaseType">SINGLE</div>
+                <div class="coverImageContainer">
+                    <img src="assets/comingSoonTemplate.jpg" alt="Coming Soon Cover Image" class="coverImage">
+                </div>
+                <div class="songName">Dream A Dream</div>
+                <div class="estReleaseDate">December 8, 2024</div>
+            </div>
 
-    <!-- Footer Section -->
+            <div class="releaseContainer">
+                <div class="releaseType">SINGLE</div>
+                <div class="coverImageContainer">
+                    <img src="assets/comingSoonTemplate.jpg" alt="Coming Soon Cover Image" class="coverImage">
+                </div>
+                <div class="songName">Into the Light</div>
+                <div class="estReleaseDate">January 10, 2025</div>
+            </div>
+
+            <div class="releaseContainer">
+                <div class="releaseType">ALBUM</div>
+                <div class="coverImageContainer">
+                    <img src="assets/comingSoonTemplate.jpg" alt="Coming Soon Cover Image" class="coverImage">
+                </div>
+                <div class="songName">Into the Light</div>
+                <div class="estReleaseDate">February 21, 2025</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div id="contactSection">
+        <div class="contactMessage">
+            I'd love to hear from you! Click below to reach out.
+        </div>
+        <div class="contactButtonContainer">
+            <a href="https://alanbirdsall.crd.co" target="_blank" class="contactButton">Contact Me</a>
+        </div>
+    </div>
+
     <footer>
         <!-- Credits Section -->
-        <p>&copy; [2024] Alan Birdsall. All rights reserved.</p>
-        <p>Credits: [Add any acknowledgments or production credits]</p>
+        <div class="copyrightLine">&copy; [2024] Alan Birdsall. All rights reserved.</div>
+        <div class="creditsContainer">
+            <h3>Credits</h3>
+            
+            <div class="creditItem">
+                <span class="creditTitle">Artwork</span>
+                <span class="dottedLine"></span>
+                <span class="creditName"><a href="https://richardclevelandwebsite.com" target="_blank" class="creditButton">Richard Cleveland</a></span>
+            </div>
+        
+            <div class="creditItem">
+                <span class="creditTitle">Executive Producer</span>
+                <span class="dottedLine"></span>
+                <span class="creditName">Alan Birdsall</span>
+            </div>
+        
+            <div class="creditItem">
+                <span class="creditTitle">Producer</span>
+                <span class="dottedLine"></span>
+                <span class="creditName">Ike Birdsall</span>
+            </div>
+        
+            <!-- <div class="creditItem">
+                <span class="creditTitle">Trumpets</span>
+                <span class="dottedLine"></span>
+                <span class="creditName">Ike Birdsall, Joseph Birdsall, Ben Birdsall</span>
+            </div> -->
+        
+            <!-- <div class="creditItem">
+                <span class="creditTitle">Featured Artist</span>
+                <span class="dottedLine"></span>
+                <span class="creditName">Esther Birdsall</span>
+            </div> -->
+        
+            <div class="creditItem">
+                <span class="creditTitle">Text, I Know That My Redeemer Lives</span>
+                <span class="dottedLine"></span>
+                <span class="creditName">Samuel Medley, 1738-1799</span>
+            </div>
+        
+            <div class="creditItem">
+                <span class="creditTitle">Composer</span>
+                <span class="dottedLine"></span>
+                <span class="creditName">Alan Birdsall</span>
+            </div>
+        </div>        
 
         <!-- Social Media Links -->
-        <div class="social">
+        <div class="socials">
             <h3>Follow</h3>
             <a href="[Facebook URL]" target="_blank">Facebook</a>
             <a href="[Instagram URL]" target="_blank">Instagram</a>
@@ -114,56 +164,6 @@
             <a href="[YouTube URL]" target="_blank">YouTube</a>
         </div>
     </footer>
-
-    <!-- JavaScript to control audio sample playback with fade out -->
-    <script>
-        const audio = document.getElementById('audio-sample');
-        const sampleStart = (60 * 3) + 22; // Start at 3:22
-        const sampleDuration = 20; // Duration of sample in seconds
-        const fadeDuration = 5; // Duration of fade out in seconds
-        const fadeStart = sampleDuration - fadeDuration; // When the fade should start (at 15s of the sample)
-
-        let fadeInterval;
-
-        audio.addEventListener('play', () => {
-            // Set the start time
-            audio.currentTime = sampleStart;
-            audio.volume = 1; // Reset volume to full at start
-
-            // Stop the audio after the sample duration
-            setTimeout(() => {
-                if (audio.currentTime >= sampleStart + sampleDuration) {
-                    audio.pause();
-                    clearInterval(fadeInterval); // Stop the fade out process if still running
-                }
-            }, sampleDuration * 1000); // Convert seconds to milliseconds
-        });
-
-        // Time update to handle fade out and reset
-        audio.addEventListener('timeupdate', () => {
-            if (audio.currentTime >= sampleStart + fadeStart) {
-                // Begin fading out over the last 5 seconds
-                if (!fadeInterval) {
-                    fadeInterval = setInterval(() => {
-                        if (audio.volume > 0.05) {
-                            audio.volume -= 0.05; // Gradually decrease volume
-                        } else {
-                            audio.volume = 0;
-                            clearInterval(fadeInterval); // Stop fade once fully faded
-                        }
-                    }, (fadeDuration / 20) * 1000); // Divide fade duration for smoother fade steps
-                }
-            }
-
-            if (audio.currentTime >= sampleStart + sampleDuration) {
-                audio.pause();
-                audio.currentTime = sampleStart; // Reset to start for replay
-                audio.volume = 1; // Reset volume for next play
-                clearInterval(fadeInterval); // Ensure fade is cleared
-            }
-        });
-
-    </script>
-
 </body>
+
 </html>
