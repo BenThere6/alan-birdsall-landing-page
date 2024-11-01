@@ -88,6 +88,10 @@ nav {
     cursor: pointer;
     transition: color 0.3s ease;
     text-decoration: none;
+    display: inline-block;
+    max-width: 150px; /* Adjust this width as necessary */
+    text-align: center; /* Center-align text */
+    word-wrap: break-word; /* Allow wrapping */
 }
 
 .navItem:hover {
