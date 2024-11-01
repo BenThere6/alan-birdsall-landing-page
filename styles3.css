@@ -377,6 +377,13 @@ footer .creditTitle {
     font-size: 1.1rem;
     text-decoration: none;
     transition: color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+}
+
+.socials a i {
+    font-size: 1.3rem; /* Adjust size as needed */
 }
 
 .socials a:hover {
