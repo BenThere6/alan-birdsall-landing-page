@@ -132,7 +132,7 @@ nav {
     text-decoration: none; /* Remove underline */
     transition: background-color 0.3s ease; /* Smooth transition */
     cursor: pointer; /* Adds pointer cursor on hover */
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .presave-button:hover {
