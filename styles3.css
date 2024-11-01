@@ -234,7 +234,7 @@ nav {
     margin-top: 10px;
     background-color: #f6ecdf; /* Match the page background */
     position: sticky;
-    top: 20%;
+    top: 10%;
     align-self: flex-start;
     border: 1px solid #ccc; /* Thin border */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
@@ -259,6 +259,27 @@ nav {
     width: 80%;
 }
 
+@media (max-width: 768px) {
+    .mainContainer {
+        flex-direction: column; /* Stack the sections vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .mainContent,
+    .albumInfoSection {
+        width: 100%; /* Make sections take full width */
+        padding: 20px; /* Ensure padding remains for mobile */
+        box-sizing: border-box; /* Prevent overflow */
+    }
+
+    .albumInfoSection {
+        position: static; /* Remove sticky positioning */
+        margin-top: 20px; /* Add space above the album info section */
+        border: 1px solid #ccc; /* Keep the border */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Keep the shadow */
+    }
+}
+
 /* ----- Footer ----- */
 
 footer {
@@ -266,9 +287,22 @@ footer {
     color: #f1f1f1; /* Light text color for readability */
     padding: 40px 20px; /* Padding for spacing */
     text-align: center; /* Center-align text */
-    font-size: 0.9rem; /* Slightly smaller font size for a compact look */
+    font-size: 0.8rem; /* Smaller font size for a more compact look */
     margin-top: 20px; /* Space above the footer */
     border-top: 2px solid #444; /* Optional border at the top for separation */
+}
+
+footer h3 {
+    font-size: 1rem; /* Smaller font size for section titles */
+}
+
+footer a {
+    font-size: 0.9rem; /* Smaller font size for links */
+}
+
+footer .creditName,
+footer .creditTitle {
+    font-size: 0.85rem; /* Smaller font size for credit items */
 }
 
 .copyrightLine {
