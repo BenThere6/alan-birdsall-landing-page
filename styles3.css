@@ -229,13 +229,16 @@ nav {
 
 /* ----- Album Info Sectioin ----- */
 .albumInfoSection {
-    width: 40%;
+    width: 40%; /* Adjusted width */
     padding: 20px;
-    background-color: #f5e6d3; /* Match the page background */
-    /* border-left: 2px solid #333; */
+    margin-top: 10px;
+    background-color: #f6ecdf; /* Match the page background */
     position: sticky;
-    top: 35px; /* Adjust this value to control where the section "sticks" */
+    top: 20%;
     align-self: flex-start;
+    border: 1px solid #ccc; /* Thin border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+    border-radius: 5px; /* Optional for rounded corners */
 }
 
 .albumInfoContent {
