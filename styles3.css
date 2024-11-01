@@ -234,6 +234,8 @@ nav {
     background-color: #f5e6d3; /* Match the page background */
     /* border-left: 2px solid #333; */
     position: sticky;
+    top: 35px; /* Adjust this value to control where the section "sticks" */
+    align-self: flex-start;
 }
 
 .albumInfoContent {
