@@ -104,7 +104,7 @@ nav {
 }
 
 .coverImageContainer {
-    max-width: 300px; /* Limit the size of the cover image */
+    max-width: 400px; /* Limit the size of the cover image */
     margin: 0 auto 20px; /* Center the image and add bottom margin */
 }
 
@@ -118,6 +118,7 @@ nav {
 #audio-sample {
     margin-top: 20px;
     margin-bottom: 20px;
+    max-width: 100%;
 }
 
 .presave-button {
@@ -183,7 +184,7 @@ nav {
 }
 
 .coverImageContainer {
-    max-width: 300px; /* Limit size of the cover image container */
+    max-width: 400px; /* Limit size of the cover image container */
     margin-bottom: 10px; /* Space below cover image */
     position: relative;
 }
@@ -224,6 +225,33 @@ nav {
     .songName {
         font-size: 1.2rem; /* Adjust font size for song name */
     }
+}
+
+/* ----- Album Info Sectioin ----- */
+.albumInfoSection {
+    width: 40%;
+    padding: 20px;
+    background-color: #f5e6d3; /* Match the page background */
+    /* border-left: 2px solid #333; */
+    position: sticky;
+}
+
+.albumInfoContent {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Parent Container Styling */
+.mainContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#featuredSection,
+#comingSoonSection,
+#contactSection {
+    width: 80%;
 }
 
 /* ----- Footer ----- */
