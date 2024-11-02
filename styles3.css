@@ -80,6 +80,11 @@ nav {
     margin: 0;
 }
 
+.navContainer li {
+    display: flex;
+    align-items: center;
+}
+
 .navItem {
     color: #f9f9f9;
     font-size: 1.2rem;
