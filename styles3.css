@@ -47,7 +47,7 @@ body {
 .logoContainer img {
     width: auto;
     height: 100px; /* Adjust the height as needed */
-    filter: drop-shadow(2px 2px .5px rgba(126, 126, 126, 0.8)); /* Adds a soft white glow */
+    filter: drop-shadow(2px 2px .5px rgba(107, 102, 60, 0.8)); /* Adds a soft white glow */
 }
 
 /* Responsive adjustments for smaller screens */
