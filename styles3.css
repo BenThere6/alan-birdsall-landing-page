@@ -150,6 +150,12 @@ nav {
     color: #fff; /* Keep text color white */
 }
 
+.featuredReleaseDate {
+    font-size: .9rem;
+    color: gray;
+    padding-top: 10px;
+}
+
 /* ----- Coming Soon Section ----- */
 
 #comingSoonSection {
