@@ -12,7 +12,7 @@ html {
 /* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f6ede1;
+    background-color: #f6f1eb;
     color: #333;
 }
 
@@ -248,7 +248,7 @@ nav {
     width: 40%; /* Adjusted width */
     padding: 20px;
     margin-top: 10px;
-    background-color: #f6ecdf; /* Match the page background */
+    background-color: #f3eae0; /* Match the page background */
     position: sticky;
     top: 10%;
     align-self: flex-start;
