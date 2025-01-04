@@ -36,14 +36,8 @@ function App() {
                 Your browser does not support the audio element.
               </audio>
             </div>
-          </div>
 
-          <div className="divider"></div>
-
-          <div id="comingSoonSection">
-            <div className="sectionTitle">Coming Soon</div>
-            <div className="allReleases">
-              <div className="releaseContainer">
+            <div className="releaseContainer">
                 <div className="releaseType">SINGLE</div>
                 <div className="coverImageContainer">
                   <img src="/assets/comingSoonTemplate.jpg" alt="Coming Soon Cover Image" />
@@ -51,7 +45,14 @@ function App() {
                 <div className="songName">Dream A Dream</div>
                 <div className="estReleaseDate">December 13, 2024</div>
               </div>
+          </div>
 
+          <div className="divider"></div>
+
+          <div id="comingSoonSection">
+            <div className="sectionTitle">Coming Soon</div>
+            <div className="allReleases">
+              
               <div className="releaseContainer">
                 <div className="releaseType">SINGLE</div>
                 <div className="coverImageContainer">
