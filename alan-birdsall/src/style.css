@@ -136,6 +136,7 @@ nav {
     margin: 0 auto 15px; /* Reduced bottom margin to tighten spacing */
 }
 
+/* Adjust cover image container */
 .coverImageContainer img {
     width: 100%;
     height: auto;
@@ -187,11 +188,23 @@ nav {
     margin-bottom: 10px; /* Space below title */
 }
 
+/* Styling for the release cards */
 .releaseContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 30px; /* Add space between each release */
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(194, 168, 76, 0.233);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add hover effect for better interaction */
+.releaseContainer:hover {
+    transform: scale(1.03);
 }
 
 /* Highlight the album section */
@@ -242,12 +255,14 @@ nav {
     gap: 50px; /* Increase spacing between releases */
 }
 
+/* Styling for release type label */
 .releaseType {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
-    color: #888; /* Subtle color for type label */
-    letter-spacing: 1px; /* Slight spacing */
+    color: #666;
+    margin-bottom: 10px;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .coverImageContainer {
@@ -263,16 +278,18 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
 }
 
+/* Title styling for singles */
 .songName {
-    font-size: 1.5rem; /* Medium font size */
+    font-size: 1.4rem;
     font-weight: bold;
-    color: #333; /* Dark color for song name */
-    margin: 0 0; /* Space around song name */
+    color: #333;
+    margin-bottom: 5px;
 }
 
+/* Styling for release date */
 .estReleaseDate {
-    font-size: 1rem;
-    color: #555; /* Slightly muted color for release date */
+    font-size: 0.9rem;
+    color: #555;
 }
 
 /* Responsive adjustments for smaller screens */
