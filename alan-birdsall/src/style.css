@@ -194,11 +194,44 @@ nav {
     margin-bottom: 30px; /* Add space between each release */
 }
 
+/* Highlight the album section */
+.releaseContainer.album {
+    background: linear-gradient(135deg, #ffe4c4 0%, #ffd700 100%);
+    border: 2px solid #f39c12;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+}
+
+/* Animation for the album container */
+.releaseContainer.album:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Album badge */
+.albumBadge {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f39c12;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Album subline styling */
 .albumSubline {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #666;
-    margin-top: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
     margin-bottom: 10px;
 }
 

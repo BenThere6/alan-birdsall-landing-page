@@ -81,13 +81,15 @@ function App() {
                 <div className="estReleaseDate">January 10, 2025</div>
               </div>
 
-              <div className="releaseContainer">
+              {/* "Into the Light" Album with Highlight */}
+              <div className="releaseContainer album">
+                <div className="albumBadge">Featured Album</div>
                 <div className="releaseType">ALBUM</div>
                 <div className="coverImageContainer">
                   <img src="/assets/comingSoonTemplate.jpg" alt="Coming Soon Cover Image" className="coverImage" />
                 </div>
                 <div className="songName">Into the Light</div>
-                <div className="albumSubline">A Journey of Perseverance</div> {/* Added Subline */}
+                <div className="albumSubline">A Journey of Perseverance</div>
                 <div className="estReleaseDate">February 21, 2025</div>
               </div>
             </div>
