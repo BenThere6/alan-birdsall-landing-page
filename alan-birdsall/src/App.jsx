@@ -77,7 +77,7 @@ function App() {
                 <div className="coverImageContainer">
                   <img src="/assets/comingSoonTemplate.jpg" alt="Coming Soon Cover Image" className="coverImage" />
                 </div>
-                <div className="songName">Into the Light</div>
+                <div className="songName">I Don't Wanna Let You Go</div>
                 <div className="estReleaseDate">January 10, 2025</div>
               </div>
 
@@ -87,6 +87,7 @@ function App() {
                   <img src="/assets/comingSoonTemplate.jpg" alt="Coming Soon Cover Image" className="coverImage" />
                 </div>
                 <div className="songName">Into the Light</div>
+                <div className="albumSubline">A Journey of Perseverance</div> {/* Added Subline */}
                 <div className="estReleaseDate">February 21, 2025</div>
               </div>
             </div>
@@ -102,35 +103,6 @@ function App() {
                 Contact Me
               </a>
             </div>
-          </div>
-        </div>
-
-        {/* Album Info Section */}
-        <div className="albumInfoSection">
-          <div className="albumInfoContent">
-            <h2>About the Album</h2>
-            <p>
-              <strong>"I Know That My Redeemer Lives"</strong> will drop on November 8, 2024. Alan reflects, "When I was
-              dealt with unfairly, so was Jesus. As Jesus hung on the cross at Calvary, He prayed, 'Father, forgive
-              them.'"
-            </p>
-            <br />
-            <p>
-              <strong>"Dream a Dream"</strong> will release on December 13, 2024. Alan shares, "It was the nighttime song
-              I sang to our seven children at their bedsides. It’s one of our family's favorites."
-            </p>
-            <br />
-            <p>
-              <strong>"Into the Light"</strong>, the album's title track, will release on January 10, 2025. "It
-              represents our journey on earth, transitioning from darkness—fear, anxiety, loneliness—to light and hope
-              when we change our focus," Alan explains.
-            </p>
-            <br />
-            <p>
-              The full album, <strong>"Into the Light"</strong>, drops on February 21, 2025, featuring Alan's mother’s
-              last heard pieces: a concerto in three movements and the heartfelt song "Momma, why’d you have to go,"
-              performed by his daughter, Esther, to represent the young Alan.
-            </p>
           </div>
         </div>
       </div>

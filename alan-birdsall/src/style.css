@@ -194,6 +194,14 @@ nav {
     margin-bottom: 30px; /* Add space between each release */
 }
 
+.albumSubline {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
 /* Container for all releases */
 .allReleases {
     display: flex;
