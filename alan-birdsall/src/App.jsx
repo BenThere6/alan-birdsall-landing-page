@@ -46,7 +46,7 @@ function App() {
                     {/* Featured Section */}
                     <div id="featuredSection">
                         {/* "I Know That My Redeemer Lives" */}
-                        <div className="playerContainer">
+                        <div className={`playerContainer ${expandedCard === 'redeemer' ? 'expanded' : ''}`}>
                             <div className="coverImageContainer">
                                 <img src="/assets/i-know-that-my-redeemer-lives-cover-art.jpg" alt="Single Cover Art" />
                             </div>
@@ -101,8 +101,8 @@ function App() {
                     <div id="comingSoonSection">
                         <div className="sectionTitle">Coming Soon</div>
                         <div className="allReleases">
-                            {/* "I Don't Wanna Let You Go" Card */}
-                            <div className="releaseContainer">
+                            {/* "I Don't Wanna Let You Go" */}
+                            <div className={`releaseContainer ${expandedCard === 'dontLetGo' ? 'expanded' : ''}`}>
                                 <div className="releaseType">SINGLE</div>
                                 <div className="coverImageContainer">
                                     <img src="/assets/comingSoonTemplate.jpg" alt="I Don't Wanna Let You Go Cover Art" className="coverImage" />

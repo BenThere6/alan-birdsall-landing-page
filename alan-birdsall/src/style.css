@@ -125,8 +125,8 @@ nav {
 /* Card Styling for Featured Songs */
 .playerContainer,
 .releaseContainer {
-    width: 100%;
-    max-width: 600px;
+    width: 80vw; /* Consistent width at 80% of the viewport */
+    max-width: 700px; /* Maximum width of 700px */
     margin: 0 auto;
     padding: 20px;
     border-radius: 12px;
@@ -134,13 +134,22 @@ nav {
     color: #333;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border: 1px solid #ccc;
-    transition: height 0.3s ease;
+    transition: height 0.3s ease, transform 0.2s ease;
 }
 
 /* Ensures the width is consistent when description is shown */
 .playerContainer.expanded,
 .releaseContainer.expanded {
-    height: auto;
+    width: 80vw; /* Keep width consistent */
+    max-width: 700px; /* Prevent width change */
+    height: auto; /* Allow height to expand */
+    margin: 0 auto;
+}
+
+/* Add hover effect to cards for visual feedback */
+.playerContainer:hover,
+.releaseContainer:hover {
+    transform: scale(1.01); /* Slight scale on hover for visual effect */
 }
 
 .playerContainer:last-child {
@@ -162,6 +171,15 @@ nav {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     font-size: 1rem;
     line-height: 1.6;
+    transition: max-height 0.3s ease; /* Smooth height transition */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .playerContainer,
+    .releaseContainer {
+        width: 90vw; /* Slightly increase width on smaller screens */
+    }
 }
 
 /* Read More Button */
