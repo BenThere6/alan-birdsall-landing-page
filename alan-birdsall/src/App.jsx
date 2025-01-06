@@ -37,6 +37,7 @@ function App() {
         <div className="mainContent">
           {/* Featured Section */}
           <div id="featuredSection">
+            {/* "I Know That My Redeemer Lives" */}
             <div className="playerContainer">
               <div className="coverImageContainer">
                 <img src="/assets/i-know-that-my-redeemer-lives-cover-art.jpg" alt="Single Cover Art" />
@@ -49,6 +50,20 @@ function App() {
                 Your browser does not support the audio element.
               </audio>
             </div>
+
+            {/* "Dream A Dream" */}
+            <div className="playerContainer">
+              <div className="coverImageContainer">
+                <img src="/assets/dream-a-dream-cover-art.jpg" alt="Dream A Dream Cover Art" />
+              </div>
+              <div className="songName">Dream A Dream</div>
+              <div className="songArtists">Alan Birdsall</div>
+              <div className="featuredReleaseDate">December 13, 2024</div>
+              <audio id="audio-sample" controls>
+                <source src="/assets/dream-a-dream-sample.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
           </div>
 
           <div className="divider"></div>
@@ -57,15 +72,6 @@ function App() {
           <div id="comingSoonSection">
             <div className="sectionTitle">Coming Soon</div>
             <div className="allReleases">
-              <div className="releaseContainer">
-                <div className="releaseType">SINGLE</div>
-                <div className="coverImageContainer">
-                  <img src="/assets/comingSoonTemplate.jpg" alt="Coming Soon Cover Image" className="coverImage" />
-                </div>
-                <div className="songName">Dream A Dream</div>
-                <div className="estReleaseDate">December 13, 2024</div>
-              </div>
-
               <div className="releaseContainer">
                 <div className="releaseType">SINGLE</div>
                 <div className="coverImageContainer">

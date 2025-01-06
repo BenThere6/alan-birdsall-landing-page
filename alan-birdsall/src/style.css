@@ -112,54 +112,59 @@ nav {
 /* ----- Featured Section ----- */
 
 #featuredSection {
-    max-width: 1024px; /* Set max width for the section */
-    margin: 0 auto; /* Center the section horizontally */
-    padding: 40px 20px; /* Add some padding for spacing */
-    text-align: center; /* Center-align all text inside this section */
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.playerContainer {
+    margin-bottom: 20px; /* Reduced bottom margin for more consistent spacing */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(194, 168, 76, 0.233); /* Light background for contrast */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: black .5px solid;
+}
+
+.playerContainer:last-child {
+    margin-bottom: 0; /* Removes bottom margin from the last song in the section */
 }
 
 .coverImageContainer {
-    max-width: 400px; /* Limit the size of the cover image */
-    margin: 0 auto 20px; /* Center the image and add bottom margin */
+    max-width: 400px;
+    margin: 0 auto 15px; /* Reduced bottom margin to tighten spacing */
 }
 
 .coverImageContainer img {
-    width: 100%; /* Make the image fill the container */
-    height: auto; /* Maintain the aspect ratio */
-    border-radius: 10px; /* Optional rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#audio-sample {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    max-width: 100%;
-}
-
-.presave-button {
-    display: inline-block;
-    padding: 15px 30px; /* Spacing inside the button */
-    font-size: 1.2rem; /* Font size for the button text */
+.songName {
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #fff; /* Text color */
-    background-color: #333; /* Button background color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    transition: background-color 0.3s ease; /* Smooth transition */
-    cursor: pointer; /* Adds pointer cursor on hover */
-    /* margin-top: 20px; */
+    color: #333;
+    margin-bottom: 5px; /* Adjusted for tighter spacing */
 }
 
-.presave-button:hover {
-    background-color: #f39c12; /* Lighter color on hover */
-    color: #fff; /* Keep text color white */
+.songArtists {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px; /* Adjusted for consistent spacing */
 }
 
 .featuredReleaseDate {
-    font-size: .9rem;
+    font-size: 0.9rem;
     color: gray;
-    padding-top: 10px;
+    margin-bottom: 15px;
+}
+
+#audio-sample {
+    margin-top: 10px; /* Reduced top margin for a tighter layout */
+    max-width: 100%;
 }
 
 /* ----- Coming Soon Section ----- */
