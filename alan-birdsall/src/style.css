@@ -41,6 +41,11 @@ body {
     bottom: 50px; /* Position it slightly above the bottom of the section */
     z-index: 1;
     text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.333); /* Light background with slight transparency */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    /* width: 100%; */
 }
 
 /* Styling for the logo image */
@@ -322,7 +327,7 @@ footer .creditTitle {
 }
 
 .copyrightLine {
-    padding-bottom: 50px;
+    padding-bottom: 5px;
 }
 
 /* Container for credits */
