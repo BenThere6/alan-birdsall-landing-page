@@ -111,21 +111,36 @@ nav {
 
 /* ----- Featured Section ----- */
 #featuredSection {
+    width: 100%;
     max-width: 1024px;
     margin: 0 auto;
     padding: 40px 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
 /* Card Styling for Featured Songs */
-.playerContainer {
-    margin-bottom: 20px;
+.playerContainer,
+.releaseContainer {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     padding: 20px;
     border-radius: 12px;
-    background-color: #f4f4f9; /* Light Gray for Card Background */
-    color: #333; /* Dark Font for Readability */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle Shadow for Depth */
-    border: 1px solid #ccc; /* Subtle Border */
+    background-color: #f4f4f9;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    transition: height 0.3s ease;
+}
+
+/* Ensures the width is consistent when description is shown */
+.playerContainer.expanded,
+.releaseContainer.expanded {
+    height: auto;
 }
 
 .playerContainer:last-child {
