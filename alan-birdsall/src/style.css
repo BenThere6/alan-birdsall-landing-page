@@ -137,6 +137,35 @@ nav {
     margin: 0 auto 15px;
 }
 
+/* Description Styling */
+.description {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Read More Button */
+.readMoreButton {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #f39c12;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.readMoreButton:hover {
+    background-color: #d4830b;
+}
+
 /* Adjust Cover Image Container */
 .coverImageContainer img {
     width: 100%;
