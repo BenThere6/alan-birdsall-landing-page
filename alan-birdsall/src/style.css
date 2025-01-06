@@ -12,7 +12,7 @@ html {
 /* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f6f1eb;
+    background-color: #ffffff;
     color: #333;
 }
 
@@ -110,7 +110,6 @@ nav {
 }
 
 /* ----- Featured Section ----- */
-
 #featuredSection {
     max-width: 1024px;
     margin: 0 auto;
@@ -118,93 +117,102 @@ nav {
     text-align: center;
 }
 
+/* Card Styling for Featured Songs */
 .playerContainer {
-    margin-bottom: 20px; /* Reduced bottom margin for more consistent spacing */
+    margin-bottom: 20px;
     padding: 20px;
-    border-radius: 10px;
-    background-color: rgba(194, 168, 76, 0.233); /* Light background for contrast */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    border: black .5px solid;
+    border-radius: 12px;
+    background-color: #f4f4f9; /* Light Gray for Card Background */
+    color: #333; /* Dark Font for Readability */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle Shadow for Depth */
+    border: 1px solid #ccc; /* Subtle Border */
 }
 
 .playerContainer:last-child {
-    margin-bottom: 0; /* Removes bottom margin from the last song in the section */
+    margin-bottom: 0;
 }
 
 .coverImageContainer {
     max-width: 400px;
-    margin: 0 auto 15px; /* Reduced bottom margin to tighten spacing */
+    margin: 0 auto 15px;
 }
 
-/* Adjust cover image container */
+/* Adjust Cover Image Container */
 .coverImageContainer img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .songName {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bold;
-    color: #333;
-    margin-bottom: 5px; /* Adjusted for tighter spacing */
+    color: #333; /* Dark Font for High Contrast */
+    margin-bottom: 10px;
 }
 
 .songArtists {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 10px; /* Adjusted for consistent spacing */
+    font-size: 1.1rem;
+    color: #555; /* Medium Gray for Subtle Contrast */
+    margin-bottom: 8px;
 }
 
 .featuredReleaseDate {
-    font-size: 0.9rem;
-    color: gray;
-    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #555; /* Medium Gray for Consistent Styling */
 }
 
+/* Audio Sample Styling */
 #audio-sample {
-    margin-top: 10px; /* Reduced top margin for a tighter layout */
+    margin-top: 10px;
     max-width: 100%;
 }
 
 /* ----- Coming Soon Section ----- */
-
 #comingSoonSection {
-    max-width: 1024px; /* Set a maximum width */
-    margin: 0 auto; /* Center the section */
-    padding: 40px 20px; /* Add padding for spacing */
-    text-align: center; /* Center-align all text */
-    background-color: transparent;
-    box-shadow: none;
-    border-radius: 0;
-    margin-top: 20px; /* Space above the section */
+    max-width: 1024px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-.sectionTitle {
-    font-size: 2rem; /* Large font size for section title */
-    font-weight: bold;
-    color: #333; /* Dark text color */
-    margin-bottom: 10px; /* Space below title */
-}
-
-/* Styling for the release cards */
+/* Card Styling for Upcoming Releases */
 .releaseContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
     padding: 20px;
-    border-radius: 10px;
-    background-color: rgba(194, 168, 76, 0.233);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ccc;
-    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    background-color: #f4f4f9; /* Light Gray for Card Background */
+    color: #333; /* Dark Font for Readability */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
+    border: 1px solid #ccc; /* Subtle Border */
 }
 
-/* Add hover effect for better interaction */
-.releaseContainer:hover {
-    transform: scale(1.03);
+.releaseType {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555; /* Medium Gray for Consistent Styling */
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.coverImageContainer img.coverImage {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.songName {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333; /* Dark Font for High Contrast */
+    margin-bottom: 10px;
+}
+
+.estReleaseDate {
+    font-size: 1rem;
+    color: #555; /* Medium Gray for Subtle Contrast */
 }
 
 /* Highlight the album section */
@@ -259,55 +267,34 @@ nav {
 .releaseType {
     font-size: 0.9rem;
     font-weight: bold;
-    color: #666;
+    color: #555;
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .coverImageContainer {
-    max-width: 400px; /* Limit size of the cover image container */
-    margin-bottom: 10px; /* Space below cover image */
+    max-width: 400px;
+    margin-bottom: 10px;
     position: relative;
-}
-
-.coverImageContainer img.coverImage {
-    width: 100%; /* Full width within container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
-}
-
-/* Title styling for singles */
-.songName {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-/* Styling for release date */
-.estReleaseDate {
-    font-size: 0.9rem;
-    color: #555;
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     #comingSoonSection {
-        padding: 20px 10px; /* Reduce padding */
+        padding: 20px 10px;
     }
 
     .coverImageContainer {
-        max-width: 200px; /* Smaller image size on mobile */
+        max-width: 200px;
     }
 
     .sectionTitle {
-        font-size: 1.5rem; /* Adjust font size for section title */
+        font-size: 1.5rem;
     }
 
     .songName {
-        font-size: 1.2rem; /* Adjust font size for song name */
+        font-size: 1.2rem;
     }
 }
 
