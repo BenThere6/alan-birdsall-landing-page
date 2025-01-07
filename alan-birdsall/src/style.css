@@ -369,6 +369,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 50px; /* Increase spacing between releases */
+    width: 100%;
 }
 
 /* Styling for release type label */
