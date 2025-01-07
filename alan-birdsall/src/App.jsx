@@ -51,7 +51,7 @@ function App() {
                                 <img src="/assets/i-know-that-my-redeemer-lives-cover-art.jpg" alt="Single Cover Art" />
                             </div>
                             <div className="songName">I Know That My Redeemer Lives</div>
-                            <div className="songArtists">Alan Birdsall</div>
+                            {/* <div className="songArtists">Alan Birdsall</div> */}
                             <div className="featuredReleaseDate">November 8, 2024</div>
                             <audio id="audio-sample" controls>
                                 <source src="/assets/i-know-that-my-redeemer-lives-sample.mp3" type="audio/mpeg" />
@@ -76,7 +76,7 @@ function App() {
                                 <img src="/assets/dreamadreamimage.jpg" alt="Dream A Dream Cover Art" />
                             </div>
                             <div className="songName">Dream A Dream</div>
-                            <div className="songArtists">Alan Birdsall</div>
+                            {/* <div className="songArtists">Alan Birdsall</div> */}
                             <div className="featuredReleaseDate">December 13, 2024</div>
                             <audio id="audio-sample" controls>
                                 <source src="/assets/dream-a-dream-sample.mp3" type="audio/mpeg" />
@@ -103,7 +103,7 @@ function App() {
                         <div className="allReleases">
                             {/* "I Don't Wanna Let You Go" */}
                             <div className={`releaseContainer ${expandedCard === 'dontLetGo' ? 'expanded' : ''}`}>
-                                <div className="releaseType">SINGLE</div>
+                                {/* <div className="releaseType">SINGLE</div> */}
                                 <div className="coverImageContainer">
                                     <img src="/assets/idontwannaletyougoimage.jpg" alt="I Don't Wanna Let You Go Cover Art" className="coverImage" />
                                 </div>
