@@ -136,8 +136,8 @@ nav {
 
 /* ----- Featured Section ----- */
 #featuredSection {
-    width: 90%;
-    max-width: 1024px;
+    /* width: 90%;
+    max-width: 1024px; */
     margin: 0 auto;
     padding: 40px 0;
     text-align: center;
@@ -150,9 +150,10 @@ nav {
 /* ----- Card Styling ----- */
 .playerContainer,
 .releaseContainer {
-    width: 90%; /* Consistent width for all cards */
-    max-width: 700px; /* Prevent cards from getting too wide */
-    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
     border-radius: 12px;
     background-color: #f4f4f9;
     color: #333;
@@ -221,8 +222,9 @@ nav {
 @media (max-width: 768px) {
     .playerContainer,
     .releaseContainer {
-        width: 90%;
-        max-width: 600px;
+        width: 95%;
+        max-width: 500px;
+        padding: 20px;
     }
 }
 
@@ -275,9 +277,16 @@ nav {
     max-width: 100%;
 }
 
+#featuredSection, 
+#comingSoonSection {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 /* ----- Coming Soon Section ----- */
 #comingSoonSection {
-    max-width: 1024px;
+    /* max-width: 1024px; */
     margin: 40px auto;
     padding: 40px 20px;
     text-align: center;
