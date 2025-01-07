@@ -73,7 +73,7 @@ function App() {
                         {/* "Dream A Dream" */}
                         <div className="playerContainer">
                             <div className="coverImageContainer">
-                                <img src="/assets/dream-a-dream-cover-art.jpg" alt="Dream A Dream Cover Art" />
+                                <img src="/assets/dreamadreamimage.jpg" alt="Dream A Dream Cover Art" />
                             </div>
                             <div className="songName">Dream A Dream</div>
                             <div className="songArtists">Alan Birdsall</div>
@@ -105,7 +105,7 @@ function App() {
                             <div className={`releaseContainer ${expandedCard === 'dontLetGo' ? 'expanded' : ''}`}>
                                 <div className="releaseType">SINGLE</div>
                                 <div className="coverImageContainer">
-                                    <img src="/assets/comingSoonTemplate.jpg" alt="I Don't Wanna Let You Go Cover Art" className="coverImage" />
+                                    <img src="/assets/idontwannaletyougoimage.jpg" alt="I Don't Wanna Let You Go Cover Art" className="coverImage" />
                                 </div>
                                 <div className="songName">I Don't Wanna Let You Go</div>
                                 <div className="estReleaseDate">January 10, 2025</div>
@@ -122,10 +122,10 @@ function App() {
 
                             {/* "Into the Light" Album Card */}
                             <div className="releaseContainer album">
-                                <div className="albumBadge">Featured Album</div>
-                                <div className="releaseType">ALBUM</div>
+                                <div className="albumBadge">Album</div>
+                                {/* <div className="releaseType">ALBUM</div> */}
                                 <div className="coverImageContainer">
-                                    <img src="/assets/comingSoonTemplate.jpg" alt="Into the Light Cover Art" className="coverImage" />
+                                    <img src="/assets/intothelightimage.jpg" alt="Into the Light Cover Art" className="coverImage" />
                                 </div>
                                 <div className="songName">Into the Light</div>
                                 <div className="albumSubline">A Journey of Perseverance</div>

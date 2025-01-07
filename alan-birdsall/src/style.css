@@ -8,12 +8,37 @@
 html {
     scroll-behavior: smooth;
 }
-
 /* Global Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
     color: #333;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.mainContent {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/* ----- Section Styling ----- */
+#featuredSection,
+#comingSoonSection,
+#contactSection {
+    width: 100vw; /* Full width of the viewport */
+    margin: 0 auto;
+    padding: 40px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
 }
 
 /* ----- Section Above Navigation as Cover Photo ----- */
@@ -111,10 +136,10 @@ nav {
 
 /* ----- Featured Section ----- */
 #featuredSection {
-    width: 100%;
+    width: 90%;
     max-width: 1024px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 40px 0;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -122,34 +147,52 @@ nav {
     gap: 40px;
 }
 
-/* Card Styling for Featured Songs */
+/* ----- Card Styling ----- */
 .playerContainer,
 .releaseContainer {
-    width: 80vw; /* Consistent width at 80% of the viewport */
-    max-width: 700px; /* Maximum width of 700px */
-    margin: 0 auto;
+    width: 90%; /* Consistent width for all cards */
+    max-width: 700px; /* Prevent cards from getting too wide */
     padding: 20px;
     border-radius: 12px;
     background-color: #f4f4f9;
     color: #333;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border: 1px solid #ccc;
-    transition: height 0.3s ease, transform 0.2s ease;
-}
-
-/* Ensures the width is consistent when description is shown */
-.playerContainer.expanded,
-.releaseContainer.expanded {
-    width: 80vw; /* Keep width consistent */
-    max-width: 700px; /* Prevent width change */
-    height: auto; /* Allow height to expand */
+    transition: transform 0.2s ease;
+    box-sizing: border-box;
     margin: 0 auto;
 }
 
-/* Add hover effect to cards for visual feedback */
+/* Reset Padding and Margins for Player Containers */
+.playerContainer,
+.releaseContainer {
+    padding: 20px;
+    margin: 0 auto;
+}
+
+
+/* Ensure consistent width when expanded */
+.playerContainer.expanded,
+.releaseContainer.expanded {
+    width: 90%;
+    max-width: 700px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Center the cards with flexbox */
+#featuredSection > .playerContainer,
+#comingSoonSection > .releaseContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Add a hover effect to cards */
 .playerContainer:hover,
 .releaseContainer:hover {
-    transform: scale(1.01); /* Slight scale on hover for visual effect */
+    transform: scale(1.01);
 }
 
 .playerContainer:last-child {
@@ -171,14 +214,15 @@ nav {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     font-size: 1rem;
     line-height: 1.6;
-    transition: max-height 0.3s ease; /* Smooth height transition */
+    transition: max-height 0.3s ease;
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .playerContainer,
     .releaseContainer {
-        width: 90vw; /* Slightly increase width on smaller screens */
+        width: 90%;
+        max-width: 600px;
     }
 }
 
@@ -211,7 +255,7 @@ nav {
     font-size: 1.6rem;
     font-weight: bold;
     color: #333; /* Dark Font for High Contrast */
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .songArtists {
@@ -263,13 +307,6 @@ nav {
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.songName {
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #333; /* Dark Font for High Contrast */
-    margin-bottom: 10px;
 }
 
 .estReleaseDate {
@@ -335,12 +372,6 @@ nav {
     letter-spacing: 1px;
 }
 
-.coverImageContainer {
-    max-width: 400px;
-    margin-bottom: 10px;
-    position: relative;
-}
-
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     #comingSoonSection {
@@ -400,7 +431,7 @@ nav {
 
     .mainContent,
     .albumInfoSection {
-        width: 100%; /* Make sections take full width */
+        width: 100%;
         padding: 20px; /* Ensure padding remains for mobile */
         box-sizing: border-box; /* Prevent overflow */
     }
