@@ -19,13 +19,44 @@ function App() {
         setExpandedCard(expandedCard === card ? null : card);
     };
 
+    // Card data to keep things consistent and concise
+    const cardData = [
+        {
+            id: 'redeemer',
+            title: 'I Know That My Redeemer Lives',
+            date: 'November 8, 2024',
+            imgSrc: '/assets/i-know-that-my-redeemer-lives-cover-art.jpg',
+            audioSrc: '/assets/i-know-that-my-redeemer-lives-sample.mp3',
+            description: `The song “I Know That My Redeemer Lives” features the cherished lyrics penned by Samuel Medley (1738–1799) and original music composed by Alan Birdsall. Alan recalls the song’s creation: “One day, while sitting at the piano, I began playing a repeated G note. From there, the rest of the melody seemed to flow effortlessly.” Initially, Alan left out one of the verses to keep the song shorter, but he felt strongly that all the verses needed to be included. “That’s when I developed the compelling bridge,” he explains. Drawing from personal trials and an experience early in life that deepened his faith, Alan shares, “This song is a testament to my belief that Jesus Christ lives and will guide us through all of our challenges.”`
+        },
+        {
+            id: 'dream',
+            title: 'Dream A Dream',
+            date: 'December 13, 2024',
+            imgSrc: '/assets/dreamadreamimage.jpg',
+            audioSrc: '/assets/dream-a-dream-sample.mp3',
+            description: `Dream a Dream began as a deeply personal project, inspired by Billy Joel’s Lullaby. The first time I heard his song on the radio, I was so moved that I felt compelled to create my own lullaby, which quickly became a cherished bedtime song for my children. When I started recording Dream a Dream in the studio, I envisioned a simple arrangement with just piano and vocals. But as the process unfolded, I kept hearing additional layers of sound in my mind—first a cello, and then more instruments. Each time I returned to the studio, the song evolved, becoming richer and more intricate.`
+        },
+        {
+            id: 'dontLetGo',
+            title: "I Don't Wanna Let You Go",
+            date: 'January 10, 2025',
+            imgSrc: '/assets/idontwannaletyougoimage.jpg',
+            description: `I Don’t Wanna Let You Go was born from a deeply meaningful dream I had shortly after my mother passed away. In the dream, I sang the words “I don’t wanna let you go” over and over to her. The melody you hear in the song today is exactly as it was in the dream—beautifully orchestrated and filled with emotion. The final verse reflects the moment my dad asked me to play my three-movement concerto for my mother. It was one of her favorite pieces and is included on this album, making this song a profound tribute to her memory and our shared love of music.`
+        },
+        {
+            id: 'intoTheLight',
+            title: 'Into the Light: A Journey of Perseverance',
+            date: 'February 21, 2025',
+            imgSrc: '/assets/intothelightimage.jpg',
+            description: 'A Journey of Perseverance'
+        }
+    ];
+
     return (
         <div>
             {/* Section Above Navigation */}
             <div className="sectionAboveNav">
-                <div className="portraitContainer">
-                    <img src="/assets/portrait.png" alt="Musician Portrait" />
-                </div>
                 <div className="logoContainer">
                     <img src="/assets/logo.png" alt="Alan Birdsall Logo" />
                 </div>
@@ -45,96 +76,30 @@ function App() {
                 <div className="mainContent">
                     {/* Featured Section */}
                     <div id="featuredSection">
-                        {/* "I Know That My Redeemer Lives" */}
-                        <div className={`playerContainer ${expandedCard === 'redeemer' ? 'expanded' : ''}`}>
-                            <div className="coverImageContainer">
-                                <img src="/assets/i-know-that-my-redeemer-lives-cover-art.jpg" alt="Single Cover Art" />
-                            </div>
-                            <div className="songName">I Know That My Redeemer Lives</div>
-                            {/* <div className="songArtists">Alan Birdsall</div> */}
-                            <div className="featuredReleaseDate">November 8, 2024</div>
-                            <audio id="audio-sample" controls>
-                                <source src="/assets/i-know-that-my-redeemer-lives-sample.mp3" type="audio/mpeg" />
-                                Your browser does not support the audio element.
-                            </audio>
-                            <button className="readMoreButton" onClick={() => toggleExpand('redeemer')}>
-                                {expandedCard === 'redeemer' ? 'Read Less' : 'Read More'}
-                            </button>
-                            {expandedCard === 'redeemer' && (
-                                <div className="description">
-                                    <p>The song “I Know That My Redeemer Lives” features the cherished lyrics penned by Samuel Medley (1738–1799) and original music composed by Alan Birdsall.</p>
-                                    <p>Alan recalls the song’s creation: “One day, while sitting at the piano, I began playing a repeated G note. From there, the rest of the melody seemed to flow effortlessly.”</p>
-                                    <p>Initially, Alan left out one of the verses to keep the song shorter, but he felt strongly that all the verses needed to be included. “That’s when I developed the compelling bridge,” he explains.</p>
-                                    <p>Drawing from personal trials and an experience early in life that deepened his faith, Alan shares, “This song is a testament to my belief that Jesus Christ lives and will guide us through all of our challenges.”</p>
-                                </div>
-                            )}
-                        </div>
-
-                        {/* "Dream A Dream" */}
-                        <div className="playerContainer">
-                            <div className="coverImageContainer">
-                                <img src="/assets/dreamadreamimage.jpg" alt="Dream A Dream Cover Art" />
-                            </div>
-                            <div className="songName">Dream A Dream</div>
-                            {/* <div className="songArtists">Alan Birdsall</div> */}
-                            <div className="featuredReleaseDate">December 13, 2024</div>
-                            <audio id="audio-sample" controls>
-                                <source src="/assets/dream-a-dream-sample.mp3" type="audio/mpeg" />
-                                Your browser does not support the audio element.
-                            </audio>
-                            <button className="readMoreButton" onClick={() => toggleExpand('dream')}>
-                                {expandedCard === 'dream' ? 'Read Less' : 'Read More'}
-                            </button>
-                            {expandedCard === 'dream' && (
-                                <div className="description">
-                                    <p>Dream a Dream began as a deeply personal project, inspired by Billy Joel’s Lullaby. The first time I heard his song on the radio, I was so moved that I felt compelled to create my own lullaby, which quickly became a cherished bedtime song for my children.</p>
-                                    <p>When I started recording Dream a Dream in the studio, I envisioned a simple arrangement with just piano and vocals. But as the process unfolded, I kept hearing additional layers of sound in my mind—first a cello, and then more instruments. Each time I returned to the studio, the song evolved, becoming richer and more intricate.</p>
-                                    <p>The result is a lullaby that’s not only deeply personal but also a reflection of the love and care poured into its creation.</p>
-                                </div>
-                            )}
-                        </div>
-                    </div>
-
-                    <div className="divider"></div>
-
-                    {/* Coming Soon Section */}
-                    <div id="comingSoonSection">
-                        <div className="sectionTitle">Coming Soon</div>
-                        <div className="allReleases">
-                            {/* "I Don't Wanna Let You Go" */}
-                            <div className={`playerContainer ${expandedCard === 'dontLetGo' ? 'expanded' : ''}`}>
-                                {/* <div className="releaseType">SINGLE</div> */}
+                        {cardData.map((card) => (
+                            <div key={card.id} className="playerContainer">
                                 <div className="coverImageContainer">
-                                    <img src="/assets/idontwannaletyougoimage.jpg" alt="I Don't Wanna Let You Go Cover Art" className="coverImage" />
+                                    <img src={card.imgSrc} alt={`${card.title} Cover Art`} />
                                 </div>
-                                <div className="songName">I Don't Wanna Let You Go</div>
-                                <div className="estReleaseDate">January 10, 2025</div>
-                                <button className="readMoreButton" onClick={() => toggleExpand('dontLetGo')}>
-                                    {expandedCard === 'dontLetGo' ? 'Read Less' : 'Read More'}
+                                <div className="songName">{card.title}</div>
+                                <div className="featuredReleaseDate">{card.date}</div>
+                                {card.audioSrc && (
+                                    <audio id="audio-sample" controls>
+                                        <source src={card.audioSrc} type="audio/mpeg" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                )}
+                                <button className="readMoreButton" onClick={() => toggleExpand(card.id)}>
+                                    {expandedCard === card.id ? 'Read Less' : 'Read More'}
                                 </button>
-                                {expandedCard === 'dontLetGo' && (
+                                {expandedCard === card.id && (
                                     <div className="description">
-                                        <p>I Don’t Wanna Let You Go was born from a deeply meaningful dream I had shortly after my mother passed away. In the dream, I sang the words “I don’t wanna let you go” over and over to her. The melody you hear in the song today is exactly as it was in the dream—beautifully orchestrated and filled with emotion.</p>
-                                        <p>The final verse reflects the moment my dad asked me to play my three-movement concerto for my mother. It was one of her favorite pieces and is included on this album, making this song a profound tribute to her memory and our shared love of music.</p>
+                                        <p>{card.description}</p>
                                     </div>
                                 )}
                             </div>
-
-                            {/* "Into the Light" Album Card */}
-                            <div className="playerContainer album">
-                                <div className="albumBadge">Album</div>
-                                {/* <div className="releaseType">ALBUM</div> */}
-                                <div className="coverImageContainer">
-                                    <img src="/assets/intothelightimage.jpg" alt="Into the Light Cover Art" className="coverImage" />
-                                </div>
-                                <div className="songName">Into the Light</div>
-                                <div className="albumSubline">A Journey of Perseverance</div>
-                                <div className="estReleaseDate">February 21, 2025</div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
-
-                    <div className="divider"></div>
 
                     {/* Contact Section */}
                     <div id="contactSection">
@@ -160,7 +125,6 @@ function App() {
                         <FontAwesomeIcon icon={faInstagram} />
                     </a>
                 </div>
-
                 <div className="platforms">
                     <h3>Listen on</h3>
                     <a href="https://open.spotify.com/artist/7cXjutpwrsrwuJyqys7jFv" target="_blank" rel="noreferrer">
