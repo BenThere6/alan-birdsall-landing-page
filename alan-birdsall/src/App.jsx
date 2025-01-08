@@ -138,7 +138,6 @@ function App() {
                                         Your browser does not support the audio element.
                                     </audio>
                                 )}
-                                {/* Only show the "Read More" button if the card is not an album */}
                                 {!card.isAlbum && (
                                     <button className="readMoreButton" onClick={() => toggleExpand(card.id)}>
                                         {expandedCard === card.id ? 'Read Less' : 'Read More'}
@@ -151,6 +150,27 @@ function App() {
                                 )}
                             </div>
                         ))}
+                    </div>
+
+                    {/* Contact Section */}
+                    {/* <h2 id="contactSection" className="sectionHeader">Contact</h2> */}
+                    <div className="playerContainer">
+                        {/* <div className="songName">Get in Touch</div> */}
+                        <div className="coverImageContainer">
+                            <iframe
+                                ref={formRef}
+                                src="https://docs.google.com/forms/d/e/1FAIpQLSfJoHyShgZrYy-S6VH9tXy3fcVSAsc9o8XV2ZEIJzPD_ZbGMw/viewform?embedded=true"
+                                width="100%"
+                                height="600"
+                                frameBorder="0"
+                                marginHeight="0"
+                                marginWidth="0"
+                                title="Contact Form"
+                                style={{ borderRadius: '12px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}
+                            >
+                                Loading…
+                            </iframe>
+                        </div>
                     </div>
                 </div>
             </div>
