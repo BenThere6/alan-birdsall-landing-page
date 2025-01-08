@@ -92,9 +92,38 @@ function App() {
             {/* Main Content */}
             <div className="mainContainer">
                 <div className="mainContent">
-                    {/* Featured Section */}
+                    {/* OUT NOW Section */}
+                    <h2 className="sectionHeader">OUT NOW!</h2>
                     <div id="featuredSection">
-                        {cardData.map((card) => (
+                        {cardData.slice(0, 2).map((card) => (
+                            <div key={card.id} className="playerContainer">
+                                <div className="coverImageContainer">
+                                    <img src={card.imgSrc} alt={`${card.title} Cover Art`} />
+                                </div>
+                                <div className="songName">{card.title}</div>
+                                <div className="featuredReleaseDate">{card.date}</div>
+                                {card.audioSrc && (
+                                    <audio id="audio-sample" controls>
+                                        <source src={card.audioSrc} type="audio/mpeg" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                )}
+                                <button className="readMoreButton" onClick={() => toggleExpand(card.id)}>
+                                    {expandedCard === card.id ? 'Read Less' : 'Read More'}
+                                </button>
+                                {expandedCard === card.id && (
+                                    <div className="description">
+                                        <p>{card.description}</p>
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* COMING SOON Section */}
+                    <h2 id="comingSoonSection" className="sectionHeader">COMING SOON</h2>
+                    <div>
+                        {cardData.slice(2).map((card) => (
                             <div key={card.id} className="playerContainer">
                                 <div className="coverImageContainer">
                                     <img src={card.imgSrc} alt={`${card.title} Cover Art`} />
