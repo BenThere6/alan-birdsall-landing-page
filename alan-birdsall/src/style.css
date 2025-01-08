@@ -148,8 +148,7 @@ nav {
 }
 
 /* ----- Card Styling ----- */
-.playerContainer,
-.releaseContainer {
+.playerContainer {
     width: 90%;
     max-width: 600px;
     margin: 20px auto;
@@ -161,7 +160,6 @@ nav {
     border: 1px solid #ccc;
     transition: transform 0.2s ease;
     box-sizing: border-box;
-    margin: 0 auto;
 }
 
 /* Reset Padding and Margins for Player Containers */
@@ -173,12 +171,21 @@ nav {
 
 
 /* Ensure consistent width when expanded */
-.playerContainer.expanded,
-.releaseContainer.expanded {
+.playerContainer.expanded {
     width: 90%;
     max-width: 700px;
     height: auto;
     margin: 0 auto;
+}
+
+.playerContainer.album {
+    background: linear-gradient(135deg, #ffe4c4 0%, #ffd700 100%);
+    border: 2px solid #f39c12;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
 }
 
 /* Center the cards with flexbox */
@@ -191,8 +198,7 @@ nav {
 }
 
 /* Add a hover effect to cards */
-.playerContainer:hover,
-.releaseContainer:hover {
+.playerContainer:hover {
     transform: scale(1.01);
 }
 
@@ -220,19 +226,18 @@ nav {
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-    #featuredSection,
-    #comingSoonSection {
-        width: 100vw;
-        margin: 0;
-        padding: 20px 0;
-    }
-
-    .playerContainer,
-    .releaseContainer {
+    .playerContainer {
         width: 100vw;
         max-width: none;
         margin: 0;
         padding: 20px;
+    }
+
+    #featuredSection,
+    #comingSoonSection {
+        width: 100vw;
+        padding: 20px 0;
+        margin: 0;
     }
 
     .allReleases {

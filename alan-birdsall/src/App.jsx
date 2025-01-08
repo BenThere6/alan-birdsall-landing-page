@@ -102,7 +102,7 @@ function App() {
                         <div className="sectionTitle">Coming Soon</div>
                         <div className="allReleases">
                             {/* "I Don't Wanna Let You Go" */}
-                            <div className={`releaseContainer ${expandedCard === 'dontLetGo' ? 'expanded' : ''}`}>
+                            <div className={`playerContainer ${expandedCard === 'dontLetGo' ? 'expanded' : ''}`}>
                                 {/* <div className="releaseType">SINGLE</div> */}
                                 <div className="coverImageContainer">
                                     <img src="/assets/idontwannaletyougoimage.jpg" alt="I Don't Wanna Let You Go Cover Art" className="coverImage" />
@@ -121,7 +121,7 @@ function App() {
                             </div>
 
                             {/* "Into the Light" Album Card */}
-                            <div className="releaseContainer album">
+                            <div className="playerContainer album">
                                 <div className="albumBadge">Album</div>
                                 {/* <div className="releaseType">ALBUM</div> */}
                                 <div className="coverImageContainer">
