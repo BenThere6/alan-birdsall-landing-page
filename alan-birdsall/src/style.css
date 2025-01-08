@@ -178,61 +178,21 @@ audio {
     margin-bottom: 20px;
 }
 
-/* Form Styling */
-.contactForm {
+/* Google Form Embed Styling */
+.googleFormEmbed {
     width: 100%;
+    max-width: 700px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-.formGroup {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-
-.formGroup label {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-.formGroup input,
-.formGroup textarea {
+.googleFormEmbed iframe {
     width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #fff;
-}
-
-.formGroup textarea {
-    height: 150px;
-    resize: none;
-}
-
-.contactButton {
-    padding: 12px 24px;
-    background-color: #f39c12;
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
+    min-height: 500px;
     border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-}
-
-.contactButtonContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.contactButton:hover {
-    background-color: #d4830b;
+    border-radius: 12px;
 }
 
 /* Footer */

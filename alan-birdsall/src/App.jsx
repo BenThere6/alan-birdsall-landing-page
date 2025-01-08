@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -13,11 +13,29 @@ import {
 function App() {
     // State to track which card is expanded
     const [expandedCard, setExpandedCard] = useState(null);
+    const formRef = useRef(); // Ref for the iframe
 
     // Toggle the expanded card
     const toggleExpand = (card) => {
         setExpandedCard(expandedCard === card ? null : card);
     };
+
+    // Dynamic height adjustment for the Google Form iframe
+    useEffect(() => {
+        const handleFormMessage = (event) => {
+            if (event.origin === 'https://docs.google.com') {
+                const newHeight = event.data['height'];
+                if (newHeight && formRef.current) {
+                    formRef.current.style.height = `${newHeight}px`;
+                }
+            }
+        };
+
+        window.addEventListener('message', handleFormMessage);
+        return () => {
+            window.removeEventListener('message', handleFormMessage);
+        };
+    }, []);
 
     // Card data to keep things consistent and concise
     const cardData = [
@@ -27,7 +45,7 @@ function App() {
             date: 'November 8, 2024',
             imgSrc: '/assets/i-know-that-my-redeemer-lives-cover-art.jpg',
             audioSrc: '/assets/i-know-that-my-redeemer-lives-sample.mp3',
-            description: `The song “I Know That My Redeemer Lives” features the cherished lyrics penned by Samuel Medley (1738–1799) and original music composed by Alan Birdsall. Alan recalls the song’s creation: “One day, while sitting at the piano, I began playing a repeated G note. From there, the rest of the melody seemed to flow effortlessly.” Initially, Alan left out one of the verses to keep the song shorter, but he felt strongly that all the verses needed to be included. “That’s when I developed the compelling bridge,” he explains. Drawing from personal trials and an experience early in life that deepened his faith, Alan shares, “This song is a testament to my belief that Jesus Christ lives and will guide us through all of our challenges.”`
+            description: `The song “I Know That My Redeemer Lives” features the cherished lyrics penned by Samuel Medley (1738–1799) and original music composed by Alan Birdsall. Alan recalls the song’s creation: “One day, while sitting at the piano, I began playing a repeated G note. From there, the rest of the melody seemed to flow effortlessly.” Initially, Alan left out one of the verses to keep the song shorter, but he felt strongly that all the verses needed to be included. “That’s when I developed the compelling bridge,” he explains. Drawing from personal trials and an experience early in life that deepened his faith, Alan shares, “This song is a testament to my belief that Jesus Christ lives and will guide us through all of our challenges.”`,
         },
         {
             id: 'dream',
@@ -35,22 +53,22 @@ function App() {
             date: 'December 13, 2024',
             imgSrc: '/assets/dreamadreamimage.jpg',
             audioSrc: '/assets/dream-a-dream-sample.mp3',
-            description: `Dream a Dream began as a deeply personal project, inspired by Billy Joel’s Lullaby. The first time I heard his song on the radio, I was so moved that I felt compelled to create my own lullaby, which quickly became a cherished bedtime song for my children. When I started recording Dream a Dream in the studio, I envisioned a simple arrangement with just piano and vocals. But as the process unfolded, I kept hearing additional layers of sound in my mind—first a cello, and then more instruments. Each time I returned to the studio, the song evolved, becoming richer and more intricate.`
+            description: `Dream a Dream began as a deeply personal project, inspired by Billy Joel’s Lullaby. The first time I heard his song on the radio, I was so moved that I felt compelled to create my own lullaby, which quickly became a cherished bedtime song for my children. When I started recording Dream a Dream in the studio, I envisioned a simple arrangement with just piano and vocals. But as the process unfolded, I kept hearing additional layers of sound in my mind—first a cello, and then more instruments. Each time I returned to the studio, the song evolved, becoming richer and more intricate.`,
         },
         {
             id: 'dontLetGo',
             title: "I Don't Wanna Let You Go",
             date: 'January 10, 2025',
             imgSrc: '/assets/idontwannaletyougoimage.jpg',
-            description: `I Don’t Wanna Let You Go was born from a deeply meaningful dream I had shortly after my mother passed away. In the dream, I sang the words “I don’t wanna let you go” over and over to her. The melody you hear in the song today is exactly as it was in the dream—beautifully orchestrated and filled with emotion. The final verse reflects the moment my dad asked me to play my three-movement concerto for my mother. It was one of her favorite pieces and is included on this album, making this song a profound tribute to her memory and our shared love of music.`
+            description: `I Don’t Wanna Let You Go was born from a deeply meaningful dream I had shortly after my mother passed away. In the dream, I sang the words “I don’t wanna let you go” over and over to her. The melody you hear in the song today is exactly as it was in the dream—beautifully orchestrated and filled with emotion. The final verse reflects the moment my dad asked me to play my three-movement concerto for my mother. It was one of her favorite pieces and is included on this album, making this song a profound tribute to her memory and our shared love of music.`,
         },
         {
             id: 'intoTheLight',
             title: 'Into the Light: A Journey of Perseverance',
             date: 'February 21, 2025',
             imgSrc: '/assets/intothelightimage.jpg',
-            description: 'A Journey of Perseverance'
-        }
+            description: 'A Journey of Perseverance',
+        },
     ];
 
     return (
@@ -102,31 +120,19 @@ function App() {
                     </div>
 
                     {/* Contact Section */}
-                    <div id="contactSection">
-                        <h2>Contact Me</h2>
-                        <form
-                            action="https://formspree.io/f/your-form-id"
-                            method="POST"
-                            className="contactForm"
+                    <div id="contactSection" className="googleFormEmbed">
+                        <iframe
+                            ref={formRef}
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSfJoHyShgZrYy-S6VH9tXy3fcVSAsc9o8XV2ZEIJzPD_ZbGMw/viewform?embedded=true"
+                            width="100%"
+                            frameBorder="0"
+                            marginHeight="0"
+                            marginWidth="0"
+                            title="Google Form"
                         >
-                            <div className="formGroup">
-                                <label htmlFor="name">Name</label>
-                                <input type="text" id="name" name="name" required placeholder="Your Name" />
-                            </div>
-                            <div className="formGroup">
-                                <label htmlFor="email">Email</label>
-                                <input type="email" id="email" name="email" required placeholder="Your Email" />
-                            </div>
-                            <div className="formGroup">
-                                <label htmlFor="message">Message</label>
-                                <textarea id="message" name="message" required placeholder="Your Message"></textarea>
-                            </div>
-                            <div className="contactButtonContainer">
-                                <button type="submit" className="contactButton">Send Message</button>
-                            </div>
-                        </form>
+                            Loading…
+                        </iframe>
                     </div>
-
                 </div>
             </div>
 
