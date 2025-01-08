@@ -156,7 +156,7 @@ function App() {
                     {/* <h2 id="contactSection" className="sectionHeader">Contact</h2> */}
                     <div className="playerContainer">
                         {/* <div className="songName">Get in Touch</div> */}
-                        <div className="coverImageContainer">
+                        <div id="contactSection" className="coverImageContainer">
                             <iframe
                                 ref={formRef}
                                 src="https://docs.google.com/forms/d/e/1FAIpQLSfJoHyShgZrYy-S6VH9tXy3fcVSAsc9o8XV2ZEIJzPD_ZbGMw/viewform?embedded=true"
