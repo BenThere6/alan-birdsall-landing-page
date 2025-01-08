@@ -6,7 +6,7 @@
 }
 
 html, body {
-    width: 100%;
+    height: 100%;
     font-family: Arial, sans-serif;
     background-color: #ffffff;
     color: #333;
@@ -19,7 +19,8 @@ html, body {
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 20px;
+    position: relative; /* Important for sticky nav */
 }
 
 /* Section Above Navigation */
@@ -29,10 +30,11 @@ html, body {
     height: 500px;
     background-image: url('/assets/Alan\ JSA\ Stage\ Oct\ 29\ 2005\ 057\ LR.jpg');
     background-size: cover;
-    background-position: center 30%; /* Shift focus upwards */
+    background-position: center 30%;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    /* margin-bottom: 15px; */
 }
 
 .logoContainer {
@@ -55,6 +57,7 @@ html, body {
 nav {
     background-color: #333;
     padding: 15px 0;
+    position: -webkit-sticky; /* Safari support */
     position: sticky;
     top: 0;
     width: 100%;
@@ -220,6 +223,9 @@ footer a:hover {
 @media (max-width: 400px) {
     .logoContainer img {
         height: 80px; /* Reduce the height of the logo */
+    }
+    nav {
+        padding: 10px 0; /* Reduce padding for small screens */
     }
     .navItem {
         font-size: 1rem; /* Reduce font size */
