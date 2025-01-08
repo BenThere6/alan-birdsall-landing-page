@@ -224,6 +224,13 @@ audio {
     cursor: pointer;
 }
 
+.contactButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
 .contactButton:hover {
     background-color: #d4830b;
 }

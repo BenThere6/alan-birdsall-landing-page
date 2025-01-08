@@ -121,7 +121,9 @@ function App() {
                                 <label htmlFor="message">Message</label>
                                 <textarea id="message" name="message" required placeholder="Your Message"></textarea>
                             </div>
-                            <button type="submit" className="contactButton">Send Message</button>
+                            <div className="contactButtonContainer">
+                                <button type="submit" className="contactButton">Send Message</button>
+                            </div>
                         </form>
                     </div>
 
