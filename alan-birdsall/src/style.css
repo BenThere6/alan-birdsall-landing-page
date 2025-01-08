@@ -162,18 +162,10 @@ nav {
     box-sizing: border-box;
 }
 
-/* Reset Padding and Margins for Player Containers */
-.playerContainer,
-.releaseContainer {
-    padding: 20px;
-    margin: 0 auto;
-}
-
-
 /* Ensure consistent width when expanded */
 .playerContainer.expanded {
     width: 90%;
-    max-width: 700px;
+    max-width: 600px;
     height: auto;
     margin: 0 auto;
 }
@@ -195,11 +187,6 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-/* Add a hover effect to cards */
-.playerContainer:hover {
-    transform: scale(1.01);
 }
 
 .playerContainer:last-child {
@@ -227,7 +214,7 @@ nav {
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .playerContainer {
-        width: 100vw;
+        width: 90vw;
         max-width: none;
         margin: 0;
         padding: 20px;
@@ -235,13 +222,13 @@ nav {
 
     #featuredSection,
     #comingSoonSection {
-        width: 100vw;
+        width: 90vw;
         padding: 20px 0;
         margin: 0;
     }
 
     .allReleases {
-        width: 100%;
+        width: 100vw;
         padding: 0;
         margin: 0;
     }
@@ -300,13 +287,13 @@ nav {
 #comingSoonSection {
     /* width: 100%; */
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0;
 }
 
 /* ----- Coming Soon Section ----- */
 #comingSoonSection {
     /* max-width: 1024px; */
-    margin: 40px auto;
+    /* margin: 40px auto; */
     padding: 40px 20px;
     text-align: center;
 }
@@ -404,7 +391,7 @@ nav {
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     #comingSoonSection {
-        padding: 20px 10px;
+        padding: 0;
     }
 
     .coverImageContainer {
@@ -457,8 +444,9 @@ nav {
 
     .mainContent,
     .albumInfoSection {
-        width: 95%;
+        width: 100%;
         /* padding: 20px; */
+        margin: 0;
         box-sizing: border-box; /* Prevent overflow */
     }
 
