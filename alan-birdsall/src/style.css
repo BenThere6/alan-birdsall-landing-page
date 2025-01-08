@@ -93,12 +93,13 @@ nav {
 .playerContainer {
     width: 90%;
     max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 40px auto; /* Increased margin to account for badge */
+    padding: 20px 20px 20px;
     background-color: #f4f4f9;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
+    position: relative;
 }
 
 /* Cover Image Styling - Maintains Aspect Ratio */
@@ -192,6 +193,52 @@ audio {
     width: 100%;
     min-height: 500px;
     border: none;
+    border-radius: 12px;
+}
+
+/* Special Styling for Album Card */
+.albumCard {
+    background-color: #fffbeb;
+    border: 2px solid #f39c12;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(243, 156, 18, 0.3);
+}
+
+.albumCard .coverImageContainer {
+    background-color: #fffbeb; /* Matches the album card background */
+}
+
+.albumBadge {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    position: absolute;
+    top: -20px; /* Adjusted position */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.coverImageContainer {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f9;  /* Optional background color */
+}
+
+.coverImageContainer img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
     border-radius: 12px;
 }
 

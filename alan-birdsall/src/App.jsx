@@ -68,6 +68,7 @@ function App() {
             date: 'February 21, 2025',
             imgSrc: '/assets/intothelightimage.jpg',
             description: 'A Journey of Perseverance',
+            isAlbum: true, // Flag to mark this as an album
         },
     ];
 
@@ -124,7 +125,8 @@ function App() {
                     <h2 id="comingSoonSection" className="sectionHeader">COMING SOON</h2>
                     <div>
                         {cardData.slice(2).map((card) => (
-                            <div key={card.id} className="playerContainer">
+                            <div key={card.id} className={`playerContainer ${card.isAlbum ? 'albumCard' : ''}`}>
+                                {card.isAlbum && <div className="albumBadge">New Album</div>}
                                 <div className="coverImageContainer">
                                     <img src={card.imgSrc} alt={`${card.title} Cover Art`} />
                                 </div>
@@ -136,9 +138,12 @@ function App() {
                                         Your browser does not support the audio element.
                                     </audio>
                                 )}
-                                <button className="readMoreButton" onClick={() => toggleExpand(card.id)}>
-                                    {expandedCard === card.id ? 'Read Less' : 'Read More'}
-                                </button>
+                                {/* Only show the "Read More" button if the card is not an album */}
+                                {!card.isAlbum && (
+                                    <button className="readMoreButton" onClick={() => toggleExpand(card.id)}>
+                                        {expandedCard === card.id ? 'Read Less' : 'Read More'}
+                                    </button>
+                                )}
                                 {expandedCard === card.id && (
                                     <div className="description">
                                         <p>{card.description}</p>
@@ -146,21 +151,6 @@ function App() {
                                 )}
                             </div>
                         ))}
-                    </div>
-
-                    {/* Contact Section */}
-                    <div id="contactSection" className="googleFormEmbed">
-                        <iframe
-                            ref={formRef}
-                            src="https://docs.google.com/forms/d/e/1FAIpQLSfJoHyShgZrYy-S6VH9tXy3fcVSAsc9o8XV2ZEIJzPD_ZbGMw/viewform?embedded=true"
-                            width="100%"
-                            frameBorder="0"
-                            marginHeight="0"
-                            marginWidth="0"
-                            title="Google Form"
-                        >
-                            Loading…
-                        </iframe>
                     </div>
                 </div>
             </div>
