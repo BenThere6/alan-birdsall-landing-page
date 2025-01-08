@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "vite build && echo 'alanbirdsall.com' > dist/CNAME",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
