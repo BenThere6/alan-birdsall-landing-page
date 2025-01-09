@@ -52,7 +52,7 @@ function App() {
             title: 'Dream A Dream',
             date: 'December 13, 2024',
             imgSrc: '/assets/dreamadreamimage.jpg',
-            audioSrc: '/assets/dream-a-dream-sample.mp3',
+            audioSrc: '/assets/dreamadream.mp3',
             description: `Dream a Dream began as a deeply personal project, inspired by Billy Joel’s Lullaby. The first time I heard his song on the radio, I was so moved that I felt compelled to create my own lullaby, which quickly became a cherished bedtime song for my children. When I started recording Dream a Dream in the studio, I envisioned a simple arrangement with just piano and vocals. But as the process unfolded, I kept hearing additional layers of sound in my mind—first a cello, and then more instruments. Each time I returned to the studio, the song evolved, becoming richer and more intricate.`,
         },
         {
@@ -60,6 +60,7 @@ function App() {
             title: "I Don't Wanna Let You Go",
             date: 'January 10, 2025',
             imgSrc: '/assets/idontwannaletyougoimage.jpg',
+            audioSrc: '/assets/idontwannaletyougo.mp3',
             description: `I Don’t Wanna Let You Go was born from a deeply meaningful dream I had shortly after my mother passed away. In the dream, I sang the words “I don’t wanna let you go” over and over to her. The melody you hear in the song today is exactly as it was in the dream—beautifully orchestrated and filled with emotion. The final verse reflects the moment my dad asked me to play my three-movement concerto for my mother. It was one of her favorite pieces and is included on this album, making this song a profound tribute to her memory and our shared love of music.`,
         },
         {
