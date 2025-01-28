@@ -87,10 +87,10 @@ function App() {
         {
             id: 'intoTheLight',
             title: 'Into the Light: A Journey of Perseverance',
-            date: 'February 21, 2025',
+            date: 'March 21, 2025',
             imgSrc: '/assets/intothelightimage.jpg',
             description: 'A Journey of Perseverance',
-            isAlbum: true, // Flag to mark this as an album
+            isAlbum: true,
         },
     ];
 
