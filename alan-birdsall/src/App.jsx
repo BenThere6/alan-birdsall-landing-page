@@ -86,7 +86,7 @@ function App() {
             <nav>
                 <ul className="navContainer">
                     <li><a href="#featuredSection" className="navItem">Featured</a></li>
-                    <li><a href="#comingSoonSection" className="navItem">Coming Soon</a></li>
+                    {/* <li><a href="#comingSoonSection" className="navItem">Coming Soon</a></li> */}
                     <li><a href="#contactSection" className="navItem">Contact</a></li>
                 </ul>
             </nav>
@@ -126,8 +126,8 @@ function App() {
                     </div>
 
                     {/* COMING SOON Section */}
-                    <h2 id="comingSoonSection" className="sectionHeader">COMING SOON</h2>
-                    <div></div>
+                    {/* <h2 id="comingSoonSection" className="sectionHeader">COMING SOON</h2> */}
+                    {/* <div></div> */}
 
                     {/* Contact Section */}
                     <div id="contactSection" className="playerContainer">
